@@ -4,3 +4,5 @@ requests
 fpdf
 tqdm
 python-dotenv
+psycopg2-binary
+PyPDF2

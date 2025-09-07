@@ -1,0 +1,6 @@
+playwright
+beautifulsoup4
+requests
+fpdf
+tqdm
+python-dotenv

@@ -1,5 +1,16 @@
 # FDA Ghana Recall, Alert & Press Release Scraper
 
+A comprehensive command-line scraper for the Ghana Food and Drugs Authority (FDA) website that extracts recalls, alerts, and press releases, automatically downloads PDFs, performs text extraction, and stores data in a PostgreSQL database.
+
+## 🎯 Latest Updates
+
+### Enhanced Press Release Support
+- **Multi-page scraping**: Now scrapes from both press release pages:
+  - `https://fdaghana.gov.gh/newsroom/press-release/`
+  - `https://fdaghana.gov.gh/newsroom/press-release-2/`
+- **Unified database structure**: Press releases are stored in the same `fda_recalls` table using consistent column naming
+- **Improved error handling**: Generates fallback PDFs for broken links with "Page not found" content
+
 A comprehensive web scraper for extracting product recalls, safety alerts, and press releases from the FDA Ghana website. The scraper downloads PDFs, extracts text content, and stores all data in a PostgreSQL database.
 
 ## 🚀 Features
@@ -101,7 +112,7 @@ python fda_recall_scraper.py --skip-alerts --skip-press
 # Scrape only alerts  
 python fda_recall_scraper.py --skip-recalls --skip-press
 
-# Scrape only press releases
+# Scrape only press releases (from both pages)
 python fda_recall_scraper.py --skip-recalls --skip-alerts
 
 # Skip press releases (recalls and alerts only)
@@ -117,14 +128,21 @@ python fda_recall_scraper.py --output-dir ./custom_output
 python fda_recall_scraper.py --headless false
 ```
 
+**Note:** Press release scraping now automatically processes both:
+- `https://fdaghana.gov.gh/newsroom/press-release/`
+- `https://fdaghana.gov.gh/newsroom/press-release-2/`
+
 ### Database Management
 
 ```bash
-# Delete all entries from database
-python delete_all_entries.py
-
 # Recreate/update database schema
 python create_db_table.py
+
+# Check database structure and data
+python check_db.py
+
+# Query press release data
+python query_press_releases.py
 ```
 
 ## 📁 Output Structure
@@ -139,16 +157,29 @@ project_root/
 ├── alerts/                     # Alert PDFs
 │   ├── Alert_Safety_Alert_*.pdf
 │   └── Alert_Medical_Alert_*.pdf
-├── press_releases/             # Press Release PDFs
-│   ├── Press_Release_Title_20250907.pdf
-│   ├── Page_Not_Found_Title_20250823.pdf
-│   └── Another_Press_Release_20250815.pdf
-└── scraper.log               # Detailed logging
+├── press_releases/             # Press Release PDFs (from both pages)
+│   ├── GHS_Warns_Public_20250907.pdf
+│   ├── Page_Not_Found_Misinformation_20250823.pdf
+│   └── Court_Upholds_FDAs_Action_to_Protect_Public_Health_from_Expi_20250506.pdf
+└── scraper.log                # Detailed logging
 ```
 
 ## 🗄 Database Schema
 
-The scraper uses a single `fda_recalls` table to store recalls, alerts, and press releases:
+The scraper uses a unified `fda_recalls` table to store all entries:
+
+**Entry Types:**
+- `'recall'` - Product recalls
+- `'alert'` - Safety alerts  
+- `'press_release'` - Press releases (from both pages)
+
+**Press Release Storage:**
+- `entry_type = 'press_release'`
+- `date_issued` - Press release date
+- `alert_title` - Press release title
+- `alert_pdf_filename` - PDF filename
+- `pdf_path` - Full path to saved PDF
+- `all_text` - Extracted PDF text content
 
 ```sql
 CREATE TABLE fda_recalls (

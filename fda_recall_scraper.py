@@ -111,7 +111,10 @@ def save_pdf(output_path: Path, title: str, fields: Dict[str, str]):
 class FDARecallScraper:
     BASE_URL = "https://fdaghana.gov.gh/newsroom/product-recalls-and-alerts/"
     ALERTS_URL = "https://fdaghana.gov.gh/newsroom/product-alerts/"
-    PRESS_RELEASES_URL = "https://fdaghana.gov.gh/newsroom/press-release/"
+    PRESS_RELEASE_URLS = [
+        "https://fdaghana.gov.gh/newsroom/press-release/",
+        "https://fdaghana.gov.gh/newsroom/press-release-2/"
+    ]
 
     def __init__(self, output_dir: Path, headless: bool = True, verbose: bool = False):
         self.output_dir = output_dir
@@ -175,14 +178,14 @@ class FDARecallScraper:
                 elif entry_type == 'press_release':
                     cur.execute("""
                         INSERT INTO fda_recalls (
-                            entry_type, press_release_title, press_release_date, pdf_press_release_link_public_link, pdf_path, all_text, created_at
+                            entry_type, date_issued, alert_title, alert_pdf_filename, pdf_path, all_text, created_at
                         ) VALUES (%s, %s, %s, %s, %s, %s, NOW())
                     """,
                     [
                         'press_release',
-                        press_release_title,
                         parse_date(press_release_date or fields.get("Date Issued") or fields.get("Date")),
-                        pdf_public_link,
+                        press_release_title,  # Store press release title in alert_title
+                        alert_pdf_filename,   # Store filename in alert_pdf_filename
                         pdf_path,
                         all_text
                     ])
@@ -425,12 +428,22 @@ class FDARecallScraper:
     def scrape_press_releases(self):
         logging.info("Starting FDA Ghana Press Releases Scraper...")
         
+        press_releases_dir = self.output_dir.parent / "press_releases"
+        press_releases_dir.mkdir(parents=True, exist_ok=True)
+        
+        # Process each press release URL
+        for url_index, press_release_url in enumerate(self.PRESS_RELEASE_URLS, 1):
+            logging.info(f"Processing press release page {url_index}/{len(self.PRESS_RELEASE_URLS)}: {press_release_url}")
+            self._scrape_press_release_page(press_release_url, press_releases_dir)
+    
+    def _scrape_press_release_page(self, press_release_url, press_releases_dir):
+        """Scrape a single press release page"""
         # Use Playwright to render the JavaScript table properly
         with sync_playwright() as p:
             browser = p.chromium.launch(headless=self.headless)
             page = browser.new_page()
             try:
-                page.goto(self.PRESS_RELEASES_URL, timeout=60000)
+                page.goto(press_release_url, timeout=60000)
                 page.wait_for_load_state("networkidle")
                 
                 # Wait for DataTable to load
@@ -495,7 +508,7 @@ class FDARecallScraper:
                 table = tables[0]
             
         if not table:
-            logging.error("Could not find press releases table on the page.")
+            logging.error(f"Could not find press releases table on the page: {press_release_url}")
             return
             
         tbody = table.find("tbody")
@@ -504,17 +517,14 @@ class FDARecallScraper:
         else:
             rows = table.find_all("tr")[1:]  # skip header if no tbody
             
-        logging.info(f"Found {len(rows)} press release entries.")
+        logging.info(f"Found {len(rows)} press release entries on {press_release_url}")
         
         # Debug: Print first few rows to see what we're getting
         for i, row in enumerate(rows[:3]):
             cols = row.find_all(["td", "th"])
             logging.debug(f"Press Release Row {i+1}: {[col.get_text(strip=True) for col in cols]}")
         
-        press_releases_dir = self.output_dir.parent / "press_releases"
-        press_releases_dir.mkdir(parents=True, exist_ok=True)
-        
-        for i, row in enumerate(tqdm(rows, desc="Processing press releases"), 1):
+        for i, row in enumerate(tqdm(rows, desc=f"Processing press releases from {press_release_url}"), 1):
             cols = row.find_all(["td", "th"])
             if len(cols) < 2:
                 continue
@@ -558,7 +568,7 @@ class FDARecallScraper:
             if link and link.has_attr("href"):
                 pdf_url = link["href"]
                 if not pdf_url.startswith("http"):
-                    pdf_url = requests.compat.urljoin(self.PRESS_RELEASES_URL, pdf_url)
+                    pdf_url = requests.compat.urljoin(press_release_url, pdf_url)
                 
                 # Store the public URL for database
                 pdf_public_url = pdf_url
@@ -647,7 +657,8 @@ class FDARecallScraper:
                 press_release_title=press_release_title,
                 press_release_date=date_issued,
                 pdf_public_link=pdf_public_url,
-                all_text=extracted_text
+                all_text=extracted_text,
+                alert_pdf_filename=pdf_filename  # Store filename as requested
             )
 
     def _create_press_release_pdf_from_html(self, pdf_path, title, date_issued, soup):

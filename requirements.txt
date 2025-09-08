@@ -6,3 +6,6 @@ tqdm
 python-dotenv
 psycopg2-binary
 PyPDF2
+pytesseract
+Pillow
+pdf2image

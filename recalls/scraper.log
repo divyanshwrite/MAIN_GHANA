@@ -1,243 +1,509 @@
-2025-09-07 23:28:47,801 [INFO] Starting FDA Ghana Recall Scraper...
-2025-09-07 23:28:47,801 [DEBUG] Using selector: KqueueSelector
-2025-09-07 23:29:34,568 [INFO] Found 42 recall entries.
-2025-09-07 23:29:34,580 [DEBUG] Starting new HTTPS connection (1): fdaghana.gov.gh:443
-2025-09-07 23:29:36,126 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2025/07/Product-Recall-Antibiotics.pdf HTTP/1.1" 200 752177
-2025-09-07 23:29:46,343 [INFO] Downloaded PDF for Recalled_Antibiotic_Products: recalls/Recalled_Antibiotic_Products/Product-Recall-Antibiotics.pdf
-2025-09-07 23:29:46,346 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:29:48,432 [DEBUG] https://fdaghana.gov.gh:443 "GET /compound-sodium-lactate-infusion-bp-ringer-lactate-solution-for-injection/ HTTP/1.1" 200 None
-2025-09-07 23:29:54,716 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Blu_Ber: recalls/Compound_Sodium_Lactate_Infusion_BP_Ringer_Lactate_Solution_for_Injection/Recall_Summary_Instant_Oats_Morning_Mills_500g_Blu_Ber.pdf
-2025-09-07 23:29:54,720 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Variety: recalls/Compound_Sodium_Lactate_Infusion_BP_Ringer_Lactate_Solution_for_Injection/Recall_Summary_Instant_Oats_Morning_Mills_500g_Variety.pdf
-2025-09-07 23:29:54,721 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Sberry: recalls/Compound_Sodium_Lactate_Infusion_BP_Ringer_Lactate_Solution_for_Injection/Recall_Summary_Instant_Oats_Morning_Mills_500g_Sberry.pdf
-2025-09-07 23:29:54,721 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Orig: recalls/Compound_Sodium_Lactate_Infusion_BP_Ringer_Lactate_Solution_for_Injection/Recall_Summary_Instant_Oats_Morning_Mills_500g_Orig.pdf
-2025-09-07 23:29:54,722 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Cml: recalls/Compound_Sodium_Lactate_Infusion_BP_Ringer_Lactate_Solution_for_Injection/Recall_Summary_Instant_Oats_Morning_Mills_500g_Cml.pdf
-2025-09-07 23:29:54,723 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Choc: recalls/Compound_Sodium_Lactate_Infusion_BP_Ringer_Lactate_Solution_for_Injection/Recall_Summary_Instant_Oats_Morning_Mills_500g_Choc.pdf
-2025-09-07 23:29:54,724 [INFO] Saved PDF for Muesli_Morning_Mills_750g_Frt_Nut: recalls/Compound_Sodium_Lactate_Infusion_BP_Ringer_Lactate_Solution_for_Injection/Recall_Summary_Muesli_Morning_Mills_750g_Frt_Nut.pdf
-2025-09-07 23:29:54,725 [INFO] Saved PDF for Muesli_Morning_Mills_750g_Hawain: recalls/Compound_Sodium_Lactate_Infusion_BP_Ringer_Lactate_Solution_for_Injection/Recall_Summary_Muesli_Morning_Mills_750g_Hawain.pdf
-2025-09-07 23:29:54,725 [INFO] Saved PDF for Muesli_Morning_Mills_15kg_Big_Crn: recalls/Compound_Sodium_Lactate_Infusion_BP_Ringer_Lactate_Solution_for_Injection/Recall_Summary_Muesli_Morning_Mills_15kg_Big_Crn.pdf
-2025-09-07 23:29:54,726 [INFO] Saved PDF for Muesli_Morning_Mills_15kg_Multgrn: recalls/Compound_Sodium_Lactate_Infusion_BP_Ringer_Lactate_Solution_for_Injection/Recall_Summary_Muesli_Morning_Mills_15kg_Multgrn.pdf
-2025-09-07 23:29:54,727 [INFO] Saved PDF for Muesli_Morning_Mills_750g_Swiss_Style: recalls/Compound_Sodium_Lactate_Infusion_BP_Ringer_Lactate_Solution_for_Injection/Recall_Summary_Muesli_Morning_Mills_750g_Swiss_Style.pdf
-2025-09-07 23:29:54,727 [INFO] Saved PDF for Muesli_Morning_Mills_750g_Sberry: recalls/Compound_Sodium_Lactate_Infusion_BP_Ringer_Lactate_Solution_for_Injection/Recall_Summary_Muesli_Morning_Mills_750g_Sberry.pdf
-2025-09-07 23:29:54,728 [INFO] Saved PDF for Cereal_Corn_Flakes_Ritebrand_500g_Pack: recalls/Compound_Sodium_Lactate_Infusion_BP_Ringer_Lactate_Solution_for_Injection/Recall_Summary_Cereal_Corn_Flakes_Ritebrand_500g_Pack.pdf
-2025-09-07 23:29:54,729 [INFO] Saved PDF for Cereal_Corn_Flakes_Ritebrand_1kg: recalls/Compound_Sodium_Lactate_Infusion_BP_Ringer_Lactate_Solution_for_Injection/Recall_Summary_Cereal_Corn_Flakes_Ritebrand_1kg.pdf
-2025-09-07 23:29:54,730 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:29:56,230 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2025/07/Product-Recall-Dorifa-Bliss-1.pdf HTTP/1.1" 200 438298
-2025-09-07 23:30:08,544 [INFO] Downloaded PDF for Recalled_Dorifa_Bliss: recalls/Recalled_Dorifa_Bliss/Product-Recall-Dorifa-Bliss-1.pdf
-2025-09-07 23:30:08,546 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:30:10,501 [DEBUG] https://fdaghana.gov.gh:443 "GET /morning-mills-and-ritebrand-products/ HTTP/1.1" 200 None
-2025-09-07 23:30:25,297 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Blu_Ber: recalls/Morning_Mills_and_Ritebrand_Products/Recall_Summary_Instant_Oats_Morning_Mills_500g_Blu_Ber.pdf
-2025-09-07 23:30:25,298 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Variety: recalls/Morning_Mills_and_Ritebrand_Products/Recall_Summary_Instant_Oats_Morning_Mills_500g_Variety.pdf
-2025-09-07 23:30:25,299 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Sberry: recalls/Morning_Mills_and_Ritebrand_Products/Recall_Summary_Instant_Oats_Morning_Mills_500g_Sberry.pdf
-2025-09-07 23:30:25,300 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Orig: recalls/Morning_Mills_and_Ritebrand_Products/Recall_Summary_Instant_Oats_Morning_Mills_500g_Orig.pdf
-2025-09-07 23:30:25,300 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Cml: recalls/Morning_Mills_and_Ritebrand_Products/Recall_Summary_Instant_Oats_Morning_Mills_500g_Cml.pdf
-2025-09-07 23:30:25,301 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Choc: recalls/Morning_Mills_and_Ritebrand_Products/Recall_Summary_Instant_Oats_Morning_Mills_500g_Choc.pdf
-2025-09-07 23:30:25,302 [INFO] Saved PDF for Muesli_Morning_Mills_750g_Frt_Nut: recalls/Morning_Mills_and_Ritebrand_Products/Recall_Summary_Muesli_Morning_Mills_750g_Frt_Nut.pdf
-2025-09-07 23:30:25,302 [INFO] Saved PDF for Muesli_Morning_Mills_750g_Hawain: recalls/Morning_Mills_and_Ritebrand_Products/Recall_Summary_Muesli_Morning_Mills_750g_Hawain.pdf
-2025-09-07 23:30:25,303 [INFO] Saved PDF for Muesli_Morning_Mills_15kg_Big_Crn: recalls/Morning_Mills_and_Ritebrand_Products/Recall_Summary_Muesli_Morning_Mills_15kg_Big_Crn.pdf
-2025-09-07 23:30:25,304 [INFO] Saved PDF for Muesli_Morning_Mills_15kg_Multgrn: recalls/Morning_Mills_and_Ritebrand_Products/Recall_Summary_Muesli_Morning_Mills_15kg_Multgrn.pdf
-2025-09-07 23:30:25,304 [INFO] Saved PDF for Muesli_Morning_Mills_750g_Swiss_Style: recalls/Morning_Mills_and_Ritebrand_Products/Recall_Summary_Muesli_Morning_Mills_750g_Swiss_Style.pdf
-2025-09-07 23:30:25,305 [INFO] Saved PDF for Muesli_Morning_Mills_750g_Sberry: recalls/Morning_Mills_and_Ritebrand_Products/Recall_Summary_Muesli_Morning_Mills_750g_Sberry.pdf
-2025-09-07 23:30:25,306 [INFO] Saved PDF for Cereal_Corn_Flakes_Ritebrand_500g_Pack: recalls/Morning_Mills_and_Ritebrand_Products/Recall_Summary_Cereal_Corn_Flakes_Ritebrand_500g_Pack.pdf
-2025-09-07 23:30:25,307 [INFO] Saved PDF for Cereal_Corn_Flakes_Ritebrand_1kg: recalls/Morning_Mills_and_Ritebrand_Products/Recall_Summary_Cereal_Corn_Flakes_Ritebrand_1kg.pdf
-2025-09-07 23:30:25,308 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:30:27,255 [DEBUG] https://fdaghana.gov.gh:443 "GET /dr-aseidu-amega-herbal-bitters/ HTTP/1.1" 200 None
-2025-09-07 23:30:39,364 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Blu_Ber: recalls/Dr_Aseidu_Amega_Herbal_Bitters/Recall_Summary_Instant_Oats_Morning_Mills_500g_Blu_Ber.pdf
-2025-09-07 23:30:39,367 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Variety: recalls/Dr_Aseidu_Amega_Herbal_Bitters/Recall_Summary_Instant_Oats_Morning_Mills_500g_Variety.pdf
-2025-09-07 23:30:39,368 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Sberry: recalls/Dr_Aseidu_Amega_Herbal_Bitters/Recall_Summary_Instant_Oats_Morning_Mills_500g_Sberry.pdf
-2025-09-07 23:30:39,368 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Orig: recalls/Dr_Aseidu_Amega_Herbal_Bitters/Recall_Summary_Instant_Oats_Morning_Mills_500g_Orig.pdf
-2025-09-07 23:30:39,369 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Cml: recalls/Dr_Aseidu_Amega_Herbal_Bitters/Recall_Summary_Instant_Oats_Morning_Mills_500g_Cml.pdf
-2025-09-07 23:30:39,370 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Choc: recalls/Dr_Aseidu_Amega_Herbal_Bitters/Recall_Summary_Instant_Oats_Morning_Mills_500g_Choc.pdf
-2025-09-07 23:30:39,371 [INFO] Saved PDF for Muesli_Morning_Mills_750g_Frt_Nut: recalls/Dr_Aseidu_Amega_Herbal_Bitters/Recall_Summary_Muesli_Morning_Mills_750g_Frt_Nut.pdf
-2025-09-07 23:30:39,371 [INFO] Saved PDF for Muesli_Morning_Mills_750g_Hawain: recalls/Dr_Aseidu_Amega_Herbal_Bitters/Recall_Summary_Muesli_Morning_Mills_750g_Hawain.pdf
-2025-09-07 23:30:39,372 [INFO] Saved PDF for Muesli_Morning_Mills_15kg_Big_Crn: recalls/Dr_Aseidu_Amega_Herbal_Bitters/Recall_Summary_Muesli_Morning_Mills_15kg_Big_Crn.pdf
-2025-09-07 23:30:39,373 [INFO] Saved PDF for Muesli_Morning_Mills_15kg_Multgrn: recalls/Dr_Aseidu_Amega_Herbal_Bitters/Recall_Summary_Muesli_Morning_Mills_15kg_Multgrn.pdf
-2025-09-07 23:30:39,373 [INFO] Saved PDF for Muesli_Morning_Mills_750g_Swiss_Style: recalls/Dr_Aseidu_Amega_Herbal_Bitters/Recall_Summary_Muesli_Morning_Mills_750g_Swiss_Style.pdf
-2025-09-07 23:30:39,374 [INFO] Saved PDF for Muesli_Morning_Mills_750g_Sberry: recalls/Dr_Aseidu_Amega_Herbal_Bitters/Recall_Summary_Muesli_Morning_Mills_750g_Sberry.pdf
-2025-09-07 23:30:39,375 [INFO] Saved PDF for Cereal_Corn_Flakes_Ritebrand_500g_Pack: recalls/Dr_Aseidu_Amega_Herbal_Bitters/Recall_Summary_Cereal_Corn_Flakes_Ritebrand_500g_Pack.pdf
-2025-09-07 23:30:39,375 [INFO] Saved PDF for Cereal_Corn_Flakes_Ritebrand_1kg: recalls/Dr_Aseidu_Amega_Herbal_Bitters/Recall_Summary_Cereal_Corn_Flakes_Ritebrand_1kg.pdf
-2025-09-07 23:30:39,377 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:30:40,878 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Grands%20Chateaux%20Sangria%20Extra%20Forte%20Wine%20(TETRA%20PACK%20250ML,%20CAN%20250ML)%20 HTTP/1.1" 301 0
-2025-09-07 23:30:42,465 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Grands%20Chateaux%20Sangria%20Extra%20Forte%20Wine%20(TETRA%20PACK%20250ML,%20CAN%20250ML HTTP/1.1" 404 None
-2025-09-07 23:30:57,081 [INFO] Saved fallback PDF for Grands_Chateaux_Sangria_Extra_Forte_Wine_TETRA_PACK_250ML_CAN_250ML: recalls/Grands_Chateaux_Sangria_Extra_Forte_Wine_TETRA_PACK_250ML_CAN_250ML/Recall_Summary_Grands_Chateaux_Sangria_Extra_Forte_Wine_TETRA_PACK_250ML_CAN_250ML.pdf
-2025-09-07 23:30:57,085 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:30:59,351 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Clavulin%20625mg%20Tablet HTTP/1.1" 404 None
-2025-09-07 23:31:15,448 [INFO] Saved fallback PDF for Clavulin_625mg_Tablet: recalls/Clavulin_625mg_Tablet/Recall_Summary_Clavulin_625mg_Tablet.pdf
-2025-09-07 23:31:15,452 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:31:17,475 [DEBUG] https://fdaghana.gov.gh:443 "GET /shalartem-artemether-180mg-and-lumefantrine-1080mg-for-oral-suspension/ HTTP/1.1" 200 None
-2025-09-07 23:31:25,651 [INFO] Saved fallback PDF for Shalartem_Artemether_180mg_and_lumefantrine_1080mg_for_oral_suspension: recalls/Shalartem_Artemether_180mg_and_lumefantrine_1080mg_for_oral_suspension/Recall_Summary_Shalartem_Artemether_180mg_and_lumefantrine_1080mg_for_oral_suspension.pdf
-2025-09-07 23:31:25,653 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:31:27,656 [DEBUG] https://fdaghana.gov.gh:443 "GET /artibase-suspension-artemether-and-lumefantrine-for-oral-suspension/ HTTP/1.1" 200 None
-2025-09-07 23:31:38,534 [INFO] Saved fallback PDF for Artibase_Suspension_Artemether_and_Lumefantrine_for_oral_Suspension: recalls/Artibase_Suspension_Artemether_and_Lumefantrine_for_oral_Suspension/Recall_Summary_Artibase_Suspension_Artemether_and_Lumefantrine_for_oral_Suspension.pdf
-2025-09-07 23:31:38,536 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:31:41,035 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Medmal%2020/120%20Artemether%20+%20Lumefantrine%20120mg%E2%80%9D%20Dry%20Syrup HTTP/1.1" 404 None
-2025-09-07 23:31:53,015 [INFO] Saved fallback PDF for Medmal_20120_Artemether__Lumefantrine_120mg_Dry_Syrup: recalls/Medmal_20120_Artemether__Lumefantrine_120mg_Dry_Syrup/Recall_Summary_Medmal_20120_Artemether__Lumefantrine_120mg_Dry_Syrup.pdf
-2025-09-07 23:31:53,021 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:31:55,087 [DEBUG] https://fdaghana.gov.gh:443 "GET /amponsah-effah-pharmaceuticals-limited/ HTTP/1.1" 200 None
-2025-09-07 23:32:10,317 [INFO] Saved fallback PDF for Efpac_Tablet: recalls/Efpac_Tablet/Recall_Summary_Efpac_Tablet.pdf
-2025-09-07 23:32:10,319 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:32:12,281 [DEBUG] https://fdaghana.gov.gh:443 "GET /kojach-limited-procold-suspension/ HTTP/1.1" 200 None
-2025-09-07 23:32:21,139 [INFO] Saved fallback PDF for Procold_Suspension: recalls/Procold_Suspension/Recall_Summary_Procold_Suspension.pdf
-2025-09-07 23:32:21,143 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:32:23,656 [DEBUG] https://fdaghana.gov.gh:443 "GET /disposet-iv-infusion-set/ HTTP/1.1" 200 None
-2025-09-07 23:32:35,104 [INFO] Saved fallback PDF for Disposet_IV_Infusion_Set: recalls/Disposet_IV_Infusion_Set/Recall_Summary_Disposet_IV_Infusion_Set.pdf
-2025-09-07 23:32:35,105 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:32:37,341 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Endure%20Pregnancy%20Test%20Strip HTTP/1.1" 404 None
-2025-09-07 23:32:43,615 [INFO] Saved fallback PDF for Endure_Pregnancy_Test_Strip: recalls/Endure_Pregnancy_Test_Strip/Recall_Summary_Endure_Pregnancy_Test_Strip.pdf
-2025-09-07 23:32:43,619 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:32:45,801 [DEBUG] https://fdaghana.gov.gh:443 "GET /ryverna-10mg-ml-solution-crizanlizumab/ HTTP/1.1" 200 None
-2025-09-07 23:32:52,839 [INFO] Saved fallback PDF for Ryverna_10mgml_solution: recalls/Ryverna_10mgml_solution/Recall_Summary_Ryverna_10mgml_solution.pdf
-2025-09-07 23:32:52,842 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:32:54,994 [DEBUG] https://fdaghana.gov.gh:443 "GET /ryverna-10mg-ml-solution-crizanlizumab-2/ HTTP/1.1" 404 None
-2025-09-07 23:33:06,964 [INFO] Saved fallback PDF for Bel_Aqua_Mineral_Water: recalls/Bel_Aqua_Mineral_Water/Recall_Summary_Bel_Aqua_Mineral_Water.pdf
-2025-09-07 23:33:06,968 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:33:09,026 [DEBUG] https://fdaghana.gov.gh:443 "GET /clean-best-zone/ HTTP/1.1" 200 None
-2025-09-07 23:33:22,512 [INFO] Saved fallback PDF for Clean_Best_Zone: recalls/Clean_Best_Zone/Recall_Summary_Clean_Best_Zone.pdf
-2025-09-07 23:33:22,514 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:33:24,927 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Beltcoin%20Oxytocin%20Injection%20BP HTTP/1.1" 404 None
-2025-09-07 23:33:44,083 [INFO] Saved fallback PDF for Beltcoin_Oxytocin_Injection_BP: recalls/Beltcoin_Oxytocin_Injection_BP/Recall_Summary_Beltcoin_Oxytocin_Injection_BP.pdf
-2025-09-07 23:33:44,088 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:33:46,133 [DEBUG] https://fdaghana.gov.gh:443 "GET /venetocin-oxytocin-injection-bp/ HTTP/1.1" 200 None
-2025-09-07 23:33:57,329 [INFO] Saved fallback PDF for Venetocin_Oxytocin_Injection_BP: recalls/Venetocin_Oxytocin_Injection_BP/Recall_Summary_Venetocin_Oxytocin_Injection_BP.pdf
-2025-09-07 23:33:57,330 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:33:59,797 [DEBUG] https://fdaghana.gov.gh:443 "GET /wipe-bleach/ HTTP/1.1" 200 None
-2025-09-07 23:34:12,473 [INFO] Saved fallback PDF for Wipe_Bleach: recalls/Wipe_Bleach/Recall_Summary_Wipe_Bleach.pdf
-2025-09-07 23:34:12,474 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:34:14,395 [DEBUG] https://fdaghana.gov.gh:443 "GET /amedin-5mg-and-10mg/ HTTP/1.1" 200 None
-2025-09-07 23:34:24,010 [INFO] Saved fallback PDF for Amedin_5mg_and_10mg: recalls/Amedin_5mg_and_10mg/Recall_Summary_Amedin_5mg_and_10mg.pdf
-2025-09-07 23:34:24,013 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:34:26,294 [DEBUG] https://fdaghana.gov.gh:443 "GET /fluphenazine-decanoate-25mg-ml/ HTTP/1.1" 200 None
-2025-09-07 23:34:37,828 [INFO] Saved fallback PDF for Fluphenazine_Decanoate_25mgml: recalls/Fluphenazine_Decanoate_25mgml/Recall_Summary_Fluphenazine_Decanoate_25mgml.pdf
-2025-09-07 23:34:37,831 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:34:39,726 [DEBUG] https://fdaghana.gov.gh:443 "GET /haloperidol-decanoate-50mg-5ml/ HTTP/1.1" 200 None
-2025-09-07 23:34:46,235 [INFO] Saved fallback PDF for Haloperidol_Decanoate_50mg5ml: recalls/Haloperidol_Decanoate_50mg5ml/Recall_Summary_Haloperidol_Decanoate_50mg5ml.pdf
-2025-09-07 23:34:46,237 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:34:47,791 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Glibetics(Glibenclamide%20Tablets%20BP%205mg) HTTP/1.1" 301 0
-2025-09-07 23:34:49,291 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Glibetics(Glibenclamide%20Tablets%20BP%205mg HTTP/1.1" 404 None
-2025-09-07 23:35:01,603 [INFO] Saved fallback PDF for GlibeticsGlibenclamide_Tablets_BP_5mg: recalls/GlibeticsGlibenclamide_Tablets_BP_5mg/Recall_Summary_GlibeticsGlibenclamide_Tablets_BP_5mg.pdf
-2025-09-07 23:35:01,608 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:35:04,011 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Jess%20Hydrogen%20Peroxide HTTP/1.1" 404 None
-2025-09-07 23:35:17,279 [INFO] Saved fallback PDF for Jess_Hydrogen_Peroxide: recalls/Jess_Hydrogen_Peroxide/Recall_Summary_Jess_Hydrogen_Peroxide.pdf
-2025-09-07 23:35:17,284 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:35:19,433 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Entrance%20Oxytocin%20Injection HTTP/1.1" 404 None
-2025-09-07 23:35:31,687 [INFO] Saved fallback PDF for Entrance_Oxytocin_Injection: recalls/Entrance_Oxytocin_Injection/Recall_Summary_Entrance_Oxytocin_Injection.pdf
-2025-09-07 23:35:31,690 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:35:33,985 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Diprofos%207mg/ml%202ml%20Amp HTTP/1.1" 404 None
-2025-09-07 23:35:40,051 [INFO] Saved fallback PDF for Diprofos_7mgml_2ml_Amp: recalls/Diprofos_7mgml_2ml_Amp/Recall_Summary_Diprofos_7mgml_2ml_Amp.pdf
-2025-09-07 23:35:40,056 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:35:41,642 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Vynif-30%20(Nifedipine%20Extended-Release%20Tqablet%2030mg) HTTP/1.1" 301 0
-2025-09-07 23:35:43,291 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Vynif-30%20(Nifedipine%20Extended-Release%20Tqablet%2030mg HTTP/1.1" 404 None
-2025-09-07 23:35:52,209 [INFO] Saved fallback PDF for Vynif-30_Nifedipine_Extended-Release_Tqablet_30mg: recalls/Vynif-30_Nifedipine_Extended-Release_Tqablet_30mg/Recall_Summary_Vynif-30_Nifedipine_Extended-Release_Tqablet_30mg.pdf
-2025-09-07 23:35:52,213 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:35:54,212 [DEBUG] https://fdaghana.gov.gh:443 "GET /vernetocin-oxytocin-injection-bp/ HTTP/1.1" 200 None
-2025-09-07 23:36:04,951 [INFO] Saved fallback PDF for Vernetocin_Oxytocin_Injection_BP: recalls/Vernetocin_Oxytocin_Injection_BP/Recall_Summary_Vernetocin_Oxytocin_Injection_BP.pdf
-2025-09-07 23:36:04,954 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:36:07,181 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Losar-Denk%20100,%2050%20,%20Colosar-Denk%2050/12.5%20,%20Colosar-Denk%20100/12.5 HTTP/1.1" 404 None
-2025-09-07 23:36:20,908 [INFO] Saved fallback PDF for Losar-Denk_100_50__Colosar-Denk_50125__Colosar-Denk_100125: recalls/Losar-Denk_100_50__Colosar-Denk_50125__Colosar-Denk_100125/Recall_Summary_Losar-Denk_100_50__Colosar-Denk_50125__Colosar-Denk_100125.pdf
-2025-09-07 23:36:20,911 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:36:23,247 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Stopkof%20Cough%20Syrup%20Baby%20Formula HTTP/1.1" 404 None
-2025-09-07 23:36:34,741 [INFO] Saved fallback PDF for Stopkof_Cough_Syrup_Baby_Formula: recalls/Stopkof_Cough_Syrup_Baby_Formula/Recall_Summary_Stopkof_Cough_Syrup_Baby_Formula.pdf
-2025-09-07 23:36:34,746 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:36:37,581 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Skyclav%20(Amoxicilin%20and%20Clavulate,%20Potassium%20for%20Oral%20Suspension)%20USP%20Strenght:%20228.5/5ml HTTP/1.1" 404 None
-2025-09-07 23:36:42,581 [INFO] Saved fallback PDF for Skyclav_Amoxicilin_and_Clavulate_Potassium_for_Oral_Suspension_USP_Strenght_22855ml: recalls/Skyclav_Amoxicilin_and_Clavulate_Potassium_for_Oral_Suspension_USP_Strenght_22855ml/Recall_Summary_Skyclav_Amoxicilin_and_Clavulate_Potassium_for_Oral_Suspension_USP_Strenght_22855ml.pdf
-2025-09-07 23:36:42,752 [ERROR] Failed to scrape detail page for Risperidione_Tablets: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
-2025-09-07 23:36:42,754 [INFO] Saved fallback PDF for Risperidione_Tablets: recalls/Risperidione_Tablets/Recall_Summary_Risperidione_Tablets.pdf
-2025-09-07 23:36:42,757 [DEBUG] Starting new HTTPS connection (2): fdaghana.gov.gh:443
-2025-09-07 23:36:45,025 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Lorazepam%20BP%202mg%20tablets HTTP/1.1" 404 None
-2025-09-07 23:36:52,812 [INFO] Saved fallback PDF for Lorazepam_BP_2mg_tablets: recalls/Lorazepam_BP_2mg_tablets/Recall_Summary_Lorazepam_BP_2mg_tablets.pdf
-2025-09-07 23:36:52,817 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:36:54,851 [DEBUG] https://fdaghana.gov.gh:443 "GET /mr-q-liquid/ HTTP/1.1" 200 None
-2025-09-07 23:37:04,006 [INFO] Saved fallback PDF for Mr_Q_Liquid: recalls/Mr_Q_Liquid/Recall_Summary_Mr_Q_Liquid.pdf
-2025-09-07 23:37:04,007 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:37:06,100 [DEBUG] https://fdaghana.gov.gh:443 "GET /novadopa-250/ HTTP/1.1" 200 None
-2025-09-07 23:37:11,368 [INFO] Saved fallback PDF for Novadopa_250mg: recalls/Novadopa_250mg/Recall_Summary_Novadopa_250mg.pdf
-2025-09-07 23:37:11,371 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:37:13,665 [DEBUG] https://fdaghana.gov.gh:443 "GET /albendazole-tablets-400mg/ HTTP/1.1" 200 None
-2025-09-07 23:37:24,866 [INFO] Saved fallback PDF for Albendazole_Tablets_400mg: recalls/Albendazole_Tablets_400mg/Recall_Summary_Albendazole_Tablets_400mg.pdf
-2025-09-07 23:37:24,869 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:37:26,863 [DEBUG] https://fdaghana.gov.gh:443 "GET /gen-aid-injection-gentamicin-sulphate-injection-80mg-2ml/ HTTP/1.1" 200 None
-2025-09-07 23:37:34,474 [INFO] Saved fallback PDF for Gen-Aid_Injection_Gentamicin_Sulphate_injection_Strength_80mg2ml: recalls/Gen-Aid_Injection_Gentamicin_Sulphate_injection_Strength_80mg2ml/Recall_Summary_Gen-Aid_Injection_Gentamicin_Sulphate_injection_Strength_80mg2ml.pdf
-2025-09-07 23:37:34,475 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:37:37,223 [DEBUG] https://fdaghana.gov.gh:443 "GET /cefoson-suspension-cefuroxime-axetil-oral-suspension-125mg-5ml/ HTTP/1.1" 200 None
-2025-09-07 23:37:44,796 [INFO] Saved fallback PDF for Cefoson_Suspension_Cefuroxime_Axetil_Oral_Suspension_125mg5ml: recalls/Cefoson_Suspension_Cefuroxime_Axetil_Oral_Suspension_125mg5ml/Recall_Summary_Cefoson_Suspension_Cefuroxime_Axetil_Oral_Suspension_125mg5ml.pdf
-2025-09-07 23:37:44,798 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:37:46,804 [DEBUG] https://fdaghana.gov.gh:443 "GET /clean-best-zone/ HTTP/1.1" 200 None
-2025-09-07 23:37:53,473 [INFO] Saved fallback PDF for Smile_Chlorine: recalls/Smile_Chlorine/Recall_Summary_Smile_Chlorine.pdf
-2025-09-07 23:37:53,475 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:37:55,597 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Clauvunova%20625mg HTTP/1.1" 404 None
-2025-09-07 23:38:02,442 [INFO] Saved fallback PDF for Clauvunova_625mg: recalls/Clauvunova_625mg/Recall_Summary_Clauvunova_625mg.pdf
-2025-09-07 23:38:02,444 [INFO] Saved fallback PDF for Product_Name: recalls/Product_Name/Recall_Summary_Product_Name.pdf
-2025-09-07 23:38:02,447 [INFO] Scraping complete.
-2025-09-07 23:38:02,447 [INFO] Starting FDA Ghana Alerts Scraper...
-2025-09-07 23:38:02,447 [DEBUG] Using selector: KqueueSelector
-2025-09-07 23:38:49,550 [WARNING] DataTable not found, using basic table
-2025-09-07 23:38:49,665 [INFO] Found 10 alert entries.
-2025-09-07 23:38:49,666 [DEBUG] Row 1: ['07/07/2025', 'SAFETY ALERT - Distribution and Sale of unwholesome Batches of Pharmaceutical Product-Paradenk Suppositories']
-2025-09-07 23:38:49,666 [DEBUG] Row 2: ['25/06/2025', 'Unregistered Oxytocin Injection 10iu/ml (A-Tocin Injection and Derm Oxytocin  Injection) in Ghana']
-2025-09-07 23:38:49,666 [DEBUG] Row 3: ['05/06/2025', 'Public Health Alert Against the Purchase and Use of Counterfeit Herceptin® 600mg/5ml in Vial (Trastuzumab Solution for Injection)  in Ghana']
-2025-09-07 23:38:49,667 [INFO] Processing alert 1: SAFETY ALERT - Distribution and Sale of unwholesom...
-2025-09-07 23:38:49,667 [INFO] Attempting to download alert PDF: https://fdaghana.gov.gh/wp-content/uploads/2025/07/Paradenk-Alert.pdf
-2025-09-07 23:38:49,669 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:38:51,142 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2025/07/Paradenk-Alert.pdf HTTP/1.1" 200 139386
-2025-09-07 23:38:54,795 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2025/07/Paradenk-Alert.pdf: 200, content-type: application/pdf
-2025-09-07 23:38:54,796 [INFO] Downloaded alert PDF: alerts/Alert_SAFETY_ALERT_-_Distribution_and_Sale_of_unwholesome_Batches__20250707.pdf
-2025-09-07 23:38:54,826 [INFO] Extracted 2432 characters from PDF
-2025-09-07 23:38:54,828 [INFO] Processing alert 2: Unregistered Oxytocin Injection 10iu/ml (A-Tocin I...
-2025-09-07 23:38:54,828 [INFO] Attempting to download alert PDF: https://fdaghana.gov.gh/wp-content/uploads/2025/06/Oxytocin_ALERT.pdf
-2025-09-07 23:38:55,186 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2025/06/Oxytocin_ALERT.pdf HTTP/1.1" 200 480787
-2025-09-07 23:39:11,951 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2025/06/Oxytocin_ALERT.pdf: 200, content-type: application/pdf
-2025-09-07 23:39:11,968 [INFO] Downloaded alert PDF: alerts/Alert_Unregistered_Oxytocin_Injection_10iuml_A-Tocin_Injection_and_20250625.pdf
-2025-09-07 23:39:12,025 [INFO] Extracted 4157 characters from PDF
-2025-09-07 23:39:12,027 [INFO] Processing alert 3: Public Health Alert Against the Purchase and Use o...
-2025-09-07 23:39:12,028 [INFO] Attempting to download alert PDF: https://fdaghana.gov.gh/wp-content/uploads/2025/06/Herceptin-alert_Q2.pdf
-2025-09-07 23:39:12,028 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:39:14,340 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2025/06/Herceptin-alert_Q2.pdf HTTP/1.1" 200 269371
-2025-09-07 23:39:23,142 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2025/06/Herceptin-alert_Q2.pdf: 200, content-type: application/pdf
-2025-09-07 23:39:23,143 [INFO] Downloaded alert PDF: alerts/Alert_Public_Health_Alert_Against_the_Purchase_and_Use_of_Counterf_20250605.pdf
-2025-09-07 23:39:23,181 [INFO] Extracted 3700 characters from PDF
-2025-09-07 23:39:23,183 [INFO] Processing alert 4: Unregistered Product – Samsu Super Oil...
-2025-09-07 23:39:23,183 [INFO] Attempting to download alert PDF: https://fdaghana.gov.gh/wp-content/uploads/2025/06/SAMSU-SUPER-OIL-ALERT.pdf
-2025-09-07 23:39:23,183 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:39:24,134 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2025/06/SAMSU-SUPER-OIL-ALERT.pdf HTTP/1.1" 200 432947
-2025-09-07 23:39:36,970 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2025/06/SAMSU-SUPER-OIL-ALERT.pdf: 200, content-type: application/pdf
-2025-09-07 23:39:36,972 [INFO] Downloaded alert PDF: alerts/Alert_Unregistered_Product__Samsu_Super_Oil_20250605.pdf
-2025-09-07 23:39:37,003 [INFO] Extracted 2796 characters from PDF
-2025-09-07 23:39:37,004 [INFO] Processing alert 5: MEDICAL PRODUCT ALERT 1 - UNREGISTERED MEDICAL PRO...
-2025-09-07 23:39:37,004 [INFO] Attempting to download alert PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/Chinese-products-ALERT_1.pdf
-2025-09-07 23:39:37,004 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:39:38,061 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/Chinese-products-ALERT_1.pdf HTTP/1.1" 200 1045172
-2025-09-07 23:40:07,100 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/Chinese-products-ALERT_1.pdf: 200, content-type: application/pdf
-2025-09-07 23:40:07,102 [INFO] Downloaded alert PDF: alerts/Alert_MEDICAL_PRODUCT_ALERT_1_-_UNREGISTERED_MEDICAL_PRODUCTS_WITH_20240903.pdf
-2025-09-07 23:40:07,147 [INFO] Extracted 2908 characters from PDF
-2025-09-07 23:40:07,148 [INFO] Processing alert 6: MEDICAL PRODUCT ALERT 2 - FALSIFIED OZEMPIC (SEMAG...
-2025-09-07 23:40:07,148 [INFO] Attempting to download alert PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/Ozempic-ALERT_2.pdf
-2025-09-07 23:40:07,149 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:40:08,393 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/Ozempic-ALERT_2.pdf HTTP/1.1" 200 196741
-2025-09-07 23:40:12,835 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/Ozempic-ALERT_2.pdf: 200, content-type: application/pdf
-2025-09-07 23:40:12,836 [INFO] Downloaded alert PDF: alerts/Alert_MEDICAL_PRODUCT_ALERT_2_-_FALSIFIED_OZEMPIC_SEMAGLUTIDE_INJE_20240903.pdf
-2025-09-07 23:40:12,878 [INFO] Extracted 2893 characters from PDF
-2025-09-07 23:40:12,880 [INFO] Processing alert 7: SAFETY ALERT ON ILLEGAL SALE OF SUBSTANDARD AND FA...
-2025-09-07 23:40:12,880 [INFO] Attempting to download alert PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/10/Illegal-Sale-of-Substandard-and-Falsified-Colamar-Oral-Suspension.pdf
-2025-09-07 23:40:13,235 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/10/Illegal-Sale-of-Substandard-and-Falsified-Colamar-Oral-Suspension.pdf HTTP/1.1" 200 689451
-2025-09-07 23:40:29,212 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/10/Illegal-Sale-of-Substandard-and-Falsified-Colamar-Oral-Suspension.pdf: 200, content-type: application/pdf
-2025-09-07 23:40:29,215 [INFO] Downloaded alert PDF: alerts/Alert_SAFETY_ALERT_ON_ILLEGAL_SALE_OF_SUBSTANDARD_AND_FALSIFIED_CO_20240824.pdf
-2025-09-07 23:40:29,297 [INFO] Extracted 7843 characters from PDF
-2025-09-07 23:40:29,300 [INFO] Processing alert 8: ARTIFICIAL RIPENING OF MANGOES...
-2025-09-07 23:40:29,301 [INFO] Attempting to download alert PDF: https://fdaghana.gov.gh/newsroom/product-alerts/ARTIFICIAL RIPENING OF MANGOES
-2025-09-07 23:40:29,301 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:40:31,485 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-alerts/ARTIFICIAL%20RIPENING%20OF%20MANGOES HTTP/1.1" 404 None
-2025-09-07 23:40:43,256 [INFO] HTTP status for https://fdaghana.gov.gh/newsroom/product-alerts/ARTIFICIAL RIPENING OF MANGOES: 404, content-type: text/html; charset=UTF-8
-2025-09-07 23:40:43,257 [WARNING] Alert PDF not found: https://fdaghana.gov.gh/newsroom/product-alerts/ARTIFICIAL RIPENING OF MANGOES (status 404)
-2025-09-07 23:40:43,260 [INFO] Saved fallback alert PDF: alerts/Alert_ARTIFICIAL_RIPENING_OF_MANGOES_20240417.pdf
-2025-09-07 23:40:43,261 [INFO] Processing alert 9: CONTAMINATED BENYLIN PAEDIATRIC SYRUP (100MLS), LO...
-2025-09-07 23:40:43,262 [INFO] Attempting to download alert PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/1-ALERT-ON-CONTAMINATED-BENYLIN-PAEDIATRIC-SYRUP.pdf
-2025-09-07 23:40:43,263 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:40:44,392 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/1-ALERT-ON-CONTAMINATED-BENYLIN-PAEDIATRIC-SYRUP.pdf HTTP/1.1" 200 1087773
-2025-09-07 23:41:07,467 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/1-ALERT-ON-CONTAMINATED-BENYLIN-PAEDIATRIC-SYRUP.pdf: 200, content-type: application/pdf
-2025-09-07 23:41:07,471 [INFO] Downloaded alert PDF: alerts/Alert_CONTAMINATED_BENYLIN_PAEDIATRIC_SYRUP_100MLS_LOT_NO_329304_20240413.pdf
-2025-09-07 23:41:07,475 [INFO] Processing alert 10: DIABOOST - PRODUCT ALERT...
-2025-09-07 23:41:07,476 [INFO] Attempting to download alert PDF: https://fdaghana.gov.gh/newsroom/product-alerts/DIABOOST - PRODUCT ALERT
-2025-09-07 23:41:07,477 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
-2025-09-07 23:41:09,713 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-alerts/DIABOOST%20-%20PRODUCT%20ALERT HTTP/1.1" 404 None
-2025-09-07 23:41:21,286 [INFO] HTTP status for https://fdaghana.gov.gh/newsroom/product-alerts/DIABOOST - PRODUCT ALERT: 404, content-type: text/html; charset=UTF-8
-2025-09-07 23:41:21,286 [WARNING] Alert PDF not found: https://fdaghana.gov.gh/newsroom/product-alerts/DIABOOST - PRODUCT ALERT (status 404)
-2025-09-07 23:41:21,288 [INFO] Saved fallback alert PDF: alerts/Alert_DIABOOST_-_PRODUCT_ALERT_20231013.pdf
+2025-09-08 11:42:45,811 [INFO] Starting FDA Ghana Recall Scraper...
+2025-09-08 11:42:45,811 [DEBUG] Using selector: KqueueSelector
+2025-09-08 11:43:14,930 [INFO] Found 42 recall entries.
+2025-09-08 11:43:14,947 [DEBUG] Starting new HTTPS connection (1): fdaghana.gov.gh:443
+2025-09-08 11:43:16,003 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2025/07/Product-Recall-Antibiotics.pdf HTTP/1.1" 200 752177
+2025-09-08 11:43:28,105 [INFO] Downloaded PDF for Recalled_Antibiotic_Products: recalls/Recalled_Antibiotic_Products/Product-Recall-Antibiotics.pdf
+2025-09-08 11:43:28,110 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:43:30,209 [DEBUG] https://fdaghana.gov.gh:443 "GET /compound-sodium-lactate-infusion-bp-ringer-lactate-solution-for-injection/ HTTP/1.1" 200 None
+2025-09-08 11:43:35,107 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Blu_Ber: recalls/Compound_Sodium_Lactate_Infusion_BP_Ringer_Lactate_Solution_for_Injection/Recall_Summary_Instant_Oats_Morning_Mills_500g_Blu_Ber.pdf
+2025-09-08 11:43:35,115 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Variety: recalls/Compound_Sodium_Lactate_Infusion_BP_Ringer_Lactate_Solution_for_Injection/Recall_Summary_Instant_Oats_Morning_Mills_500g_Variety.pdf
+2025-09-08 11:43:35,116 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Sberry: recalls/Compound_Sodium_Lactate_Infusion_BP_Ringer_Lactate_Solution_for_Injection/Recall_Summary_Instant_Oats_Morning_Mills_500g_Sberry.pdf
+2025-09-08 11:43:35,117 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Orig: recalls/Compound_Sodium_Lactate_Infusion_BP_Ringer_Lactate_Solution_for_Injection/Recall_Summary_Instant_Oats_Morning_Mills_500g_Orig.pdf
+2025-09-08 11:43:35,118 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Cml: recalls/Compound_Sodium_Lactate_Infusion_BP_Ringer_Lactate_Solution_for_Injection/Recall_Summary_Instant_Oats_Morning_Mills_500g_Cml.pdf
+2025-09-08 11:43:35,119 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Choc: recalls/Compound_Sodium_Lactate_Infusion_BP_Ringer_Lactate_Solution_for_Injection/Recall_Summary_Instant_Oats_Morning_Mills_500g_Choc.pdf
+2025-09-08 11:43:35,119 [INFO] Saved PDF for Muesli_Morning_Mills_750g_Frt_Nut: recalls/Compound_Sodium_Lactate_Infusion_BP_Ringer_Lactate_Solution_for_Injection/Recall_Summary_Muesli_Morning_Mills_750g_Frt_Nut.pdf
+2025-09-08 11:43:35,120 [INFO] Saved PDF for Muesli_Morning_Mills_750g_Hawain: recalls/Compound_Sodium_Lactate_Infusion_BP_Ringer_Lactate_Solution_for_Injection/Recall_Summary_Muesli_Morning_Mills_750g_Hawain.pdf
+2025-09-08 11:43:35,121 [INFO] Saved PDF for Muesli_Morning_Mills_15kg_Big_Crn: recalls/Compound_Sodium_Lactate_Infusion_BP_Ringer_Lactate_Solution_for_Injection/Recall_Summary_Muesli_Morning_Mills_15kg_Big_Crn.pdf
+2025-09-08 11:43:35,122 [INFO] Saved PDF for Muesli_Morning_Mills_15kg_Multgrn: recalls/Compound_Sodium_Lactate_Infusion_BP_Ringer_Lactate_Solution_for_Injection/Recall_Summary_Muesli_Morning_Mills_15kg_Multgrn.pdf
+2025-09-08 11:43:35,123 [INFO] Saved PDF for Muesli_Morning_Mills_750g_Swiss_Style: recalls/Compound_Sodium_Lactate_Infusion_BP_Ringer_Lactate_Solution_for_Injection/Recall_Summary_Muesli_Morning_Mills_750g_Swiss_Style.pdf
+2025-09-08 11:43:35,124 [INFO] Saved PDF for Muesli_Morning_Mills_750g_Sberry: recalls/Compound_Sodium_Lactate_Infusion_BP_Ringer_Lactate_Solution_for_Injection/Recall_Summary_Muesli_Morning_Mills_750g_Sberry.pdf
+2025-09-08 11:43:35,126 [INFO] Saved PDF for Cereal_Corn_Flakes_Ritebrand_500g_Pack: recalls/Compound_Sodium_Lactate_Infusion_BP_Ringer_Lactate_Solution_for_Injection/Recall_Summary_Cereal_Corn_Flakes_Ritebrand_500g_Pack.pdf
+2025-09-08 11:43:35,127 [INFO] Saved PDF for Cereal_Corn_Flakes_Ritebrand_1kg: recalls/Compound_Sodium_Lactate_Infusion_BP_Ringer_Lactate_Solution_for_Injection/Recall_Summary_Cereal_Corn_Flakes_Ritebrand_1kg.pdf
+2025-09-08 11:43:35,525 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2025/07/Product-Recall-Dorifa-Bliss-1.pdf HTTP/1.1" 200 438298
+2025-09-08 11:43:39,967 [INFO] Downloaded PDF for Recalled_Dorifa_Bliss: recalls/Recalled_Dorifa_Bliss/Product-Recall-Dorifa-Bliss-1.pdf
+2025-09-08 11:43:41,286 [DEBUG] https://fdaghana.gov.gh:443 "GET /morning-mills-and-ritebrand-products/ HTTP/1.1" 200 None
+2025-09-08 11:43:48,232 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Blu_Ber: recalls/Morning_Mills_and_Ritebrand_Products/Recall_Summary_Instant_Oats_Morning_Mills_500g_Blu_Ber.pdf
+2025-09-08 11:43:48,234 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Variety: recalls/Morning_Mills_and_Ritebrand_Products/Recall_Summary_Instant_Oats_Morning_Mills_500g_Variety.pdf
+2025-09-08 11:43:48,235 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Sberry: recalls/Morning_Mills_and_Ritebrand_Products/Recall_Summary_Instant_Oats_Morning_Mills_500g_Sberry.pdf
+2025-09-08 11:43:48,235 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Orig: recalls/Morning_Mills_and_Ritebrand_Products/Recall_Summary_Instant_Oats_Morning_Mills_500g_Orig.pdf
+2025-09-08 11:43:48,236 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Cml: recalls/Morning_Mills_and_Ritebrand_Products/Recall_Summary_Instant_Oats_Morning_Mills_500g_Cml.pdf
+2025-09-08 11:43:48,237 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Choc: recalls/Morning_Mills_and_Ritebrand_Products/Recall_Summary_Instant_Oats_Morning_Mills_500g_Choc.pdf
+2025-09-08 11:43:48,237 [INFO] Saved PDF for Muesli_Morning_Mills_750g_Frt_Nut: recalls/Morning_Mills_and_Ritebrand_Products/Recall_Summary_Muesli_Morning_Mills_750g_Frt_Nut.pdf
+2025-09-08 11:43:48,238 [INFO] Saved PDF for Muesli_Morning_Mills_750g_Hawain: recalls/Morning_Mills_and_Ritebrand_Products/Recall_Summary_Muesli_Morning_Mills_750g_Hawain.pdf
+2025-09-08 11:43:48,239 [INFO] Saved PDF for Muesli_Morning_Mills_15kg_Big_Crn: recalls/Morning_Mills_and_Ritebrand_Products/Recall_Summary_Muesli_Morning_Mills_15kg_Big_Crn.pdf
+2025-09-08 11:43:48,240 [INFO] Saved PDF for Muesli_Morning_Mills_15kg_Multgrn: recalls/Morning_Mills_and_Ritebrand_Products/Recall_Summary_Muesli_Morning_Mills_15kg_Multgrn.pdf
+2025-09-08 11:43:48,241 [INFO] Saved PDF for Muesli_Morning_Mills_750g_Swiss_Style: recalls/Morning_Mills_and_Ritebrand_Products/Recall_Summary_Muesli_Morning_Mills_750g_Swiss_Style.pdf
+2025-09-08 11:43:48,242 [INFO] Saved PDF for Muesli_Morning_Mills_750g_Sberry: recalls/Morning_Mills_and_Ritebrand_Products/Recall_Summary_Muesli_Morning_Mills_750g_Sberry.pdf
+2025-09-08 11:43:48,242 [INFO] Saved PDF for Cereal_Corn_Flakes_Ritebrand_500g_Pack: recalls/Morning_Mills_and_Ritebrand_Products/Recall_Summary_Cereal_Corn_Flakes_Ritebrand_500g_Pack.pdf
+2025-09-08 11:43:48,243 [INFO] Saved PDF for Cereal_Corn_Flakes_Ritebrand_1kg: recalls/Morning_Mills_and_Ritebrand_Products/Recall_Summary_Cereal_Corn_Flakes_Ritebrand_1kg.pdf
+2025-09-08 11:43:48,244 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:43:50,245 [DEBUG] https://fdaghana.gov.gh:443 "GET /dr-aseidu-amega-herbal-bitters/ HTTP/1.1" 200 None
+2025-09-08 11:43:55,018 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Blu_Ber: recalls/Dr_Aseidu_Amega_Herbal_Bitters/Recall_Summary_Instant_Oats_Morning_Mills_500g_Blu_Ber.pdf
+2025-09-08 11:43:55,021 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Variety: recalls/Dr_Aseidu_Amega_Herbal_Bitters/Recall_Summary_Instant_Oats_Morning_Mills_500g_Variety.pdf
+2025-09-08 11:43:55,023 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Sberry: recalls/Dr_Aseidu_Amega_Herbal_Bitters/Recall_Summary_Instant_Oats_Morning_Mills_500g_Sberry.pdf
+2025-09-08 11:43:55,024 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Orig: recalls/Dr_Aseidu_Amega_Herbal_Bitters/Recall_Summary_Instant_Oats_Morning_Mills_500g_Orig.pdf
+2025-09-08 11:43:55,025 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Cml: recalls/Dr_Aseidu_Amega_Herbal_Bitters/Recall_Summary_Instant_Oats_Morning_Mills_500g_Cml.pdf
+2025-09-08 11:43:55,026 [INFO] Saved PDF for Instant_Oats_Morning_Mills_500g_Choc: recalls/Dr_Aseidu_Amega_Herbal_Bitters/Recall_Summary_Instant_Oats_Morning_Mills_500g_Choc.pdf
+2025-09-08 11:43:55,030 [INFO] Saved PDF for Muesli_Morning_Mills_750g_Frt_Nut: recalls/Dr_Aseidu_Amega_Herbal_Bitters/Recall_Summary_Muesli_Morning_Mills_750g_Frt_Nut.pdf
+2025-09-08 11:43:55,031 [INFO] Saved PDF for Muesli_Morning_Mills_750g_Hawain: recalls/Dr_Aseidu_Amega_Herbal_Bitters/Recall_Summary_Muesli_Morning_Mills_750g_Hawain.pdf
+2025-09-08 11:43:55,031 [INFO] Saved PDF for Muesli_Morning_Mills_15kg_Big_Crn: recalls/Dr_Aseidu_Amega_Herbal_Bitters/Recall_Summary_Muesli_Morning_Mills_15kg_Big_Crn.pdf
+2025-09-08 11:43:55,032 [INFO] Saved PDF for Muesli_Morning_Mills_15kg_Multgrn: recalls/Dr_Aseidu_Amega_Herbal_Bitters/Recall_Summary_Muesli_Morning_Mills_15kg_Multgrn.pdf
+2025-09-08 11:43:55,033 [INFO] Saved PDF for Muesli_Morning_Mills_750g_Swiss_Style: recalls/Dr_Aseidu_Amega_Herbal_Bitters/Recall_Summary_Muesli_Morning_Mills_750g_Swiss_Style.pdf
+2025-09-08 11:43:55,033 [INFO] Saved PDF for Muesli_Morning_Mills_750g_Sberry: recalls/Dr_Aseidu_Amega_Herbal_Bitters/Recall_Summary_Muesli_Morning_Mills_750g_Sberry.pdf
+2025-09-08 11:43:55,034 [INFO] Saved PDF for Cereal_Corn_Flakes_Ritebrand_500g_Pack: recalls/Dr_Aseidu_Amega_Herbal_Bitters/Recall_Summary_Cereal_Corn_Flakes_Ritebrand_500g_Pack.pdf
+2025-09-08 11:43:55,035 [INFO] Saved PDF for Cereal_Corn_Flakes_Ritebrand_1kg: recalls/Dr_Aseidu_Amega_Herbal_Bitters/Recall_Summary_Cereal_Corn_Flakes_Ritebrand_1kg.pdf
+2025-09-08 11:43:55,834 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Grands%20Chateaux%20Sangria%20Extra%20Forte%20Wine%20(TETRA%20PACK%20250ML,%20CAN%20250ML)%20 HTTP/1.1" 301 0
+2025-09-08 11:43:57,418 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Grands%20Chateaux%20Sangria%20Extra%20Forte%20Wine%20(TETRA%20PACK%20250ML,%20CAN%20250ML HTTP/1.1" 404 None
+2025-09-08 11:44:00,749 [INFO] Saved fallback PDF for Grands_Chateaux_Sangria_Extra_Forte_Wine_TETRA_PACK_250ML_CAN_250ML: recalls/Grands_Chateaux_Sangria_Extra_Forte_Wine_TETRA_PACK_250ML_CAN_250ML/Recall_Summary_Grands_Chateaux_Sangria_Extra_Forte_Wine_TETRA_PACK_250ML_CAN_250ML.pdf
+2025-09-08 11:44:02,658 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Clavulin%20625mg%20Tablet HTTP/1.1" 404 None
+2025-09-08 11:44:09,483 [INFO] Saved fallback PDF for Clavulin_625mg_Tablet: recalls/Clavulin_625mg_Tablet/Recall_Summary_Clavulin_625mg_Tablet.pdf
+2025-09-08 11:44:09,497 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:44:14,076 [DEBUG] https://fdaghana.gov.gh:443 "GET /shalartem-artemether-180mg-and-lumefantrine-1080mg-for-oral-suspension/ HTTP/1.1" 200 None
+2025-09-08 11:44:19,661 [INFO] Saved fallback PDF for Shalartem_Artemether_180mg_and_lumefantrine_1080mg_for_oral_suspension: recalls/Shalartem_Artemether_180mg_and_lumefantrine_1080mg_for_oral_suspension/Recall_Summary_Shalartem_Artemether_180mg_and_lumefantrine_1080mg_for_oral_suspension.pdf
+2025-09-08 11:44:19,664 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:44:21,710 [DEBUG] https://fdaghana.gov.gh:443 "GET /artibase-suspension-artemether-and-lumefantrine-for-oral-suspension/ HTTP/1.1" 200 None
+2025-09-08 11:44:28,640 [INFO] Saved fallback PDF for Artibase_Suspension_Artemether_and_Lumefantrine_for_oral_Suspension: recalls/Artibase_Suspension_Artemether_and_Lumefantrine_for_oral_Suspension/Recall_Summary_Artibase_Suspension_Artemether_and_Lumefantrine_for_oral_Suspension.pdf
+2025-09-08 11:44:28,646 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:44:30,886 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Medmal%2020/120%20Artemether%20+%20Lumefantrine%20120mg%E2%80%9D%20Dry%20Syrup HTTP/1.1" 404 None
+2025-09-08 11:44:35,879 [INFO] Saved fallback PDF for Medmal_20120_Artemether__Lumefantrine_120mg_Dry_Syrup: recalls/Medmal_20120_Artemether__Lumefantrine_120mg_Dry_Syrup/Recall_Summary_Medmal_20120_Artemether__Lumefantrine_120mg_Dry_Syrup.pdf
+2025-09-08 11:44:35,896 [ERROR] Failed to scrape detail page for Efpac_Tablet: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-09-08 11:44:35,898 [INFO] Saved fallback PDF for Efpac_Tablet: recalls/Efpac_Tablet/Recall_Summary_Efpac_Tablet.pdf
+2025-09-08 11:44:35,901 [DEBUG] Starting new HTTPS connection (2): fdaghana.gov.gh:443
+2025-09-08 11:44:37,865 [DEBUG] https://fdaghana.gov.gh:443 "GET /kojach-limited-procold-suspension/ HTTP/1.1" 200 None
+2025-09-08 11:44:42,815 [INFO] Saved fallback PDF for Procold_Suspension: recalls/Procold_Suspension/Recall_Summary_Procold_Suspension.pdf
+2025-09-08 11:44:44,165 [DEBUG] https://fdaghana.gov.gh:443 "GET /disposet-iv-infusion-set/ HTTP/1.1" 200 None
+2025-09-08 11:44:47,208 [INFO] Saved fallback PDF for Disposet_IV_Infusion_Set: recalls/Disposet_IV_Infusion_Set/Recall_Summary_Disposet_IV_Infusion_Set.pdf
+2025-09-08 11:44:48,822 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Endure%20Pregnancy%20Test%20Strip HTTP/1.1" 404 None
+2025-09-08 11:44:53,213 [INFO] Saved fallback PDF for Endure_Pregnancy_Test_Strip: recalls/Endure_Pregnancy_Test_Strip/Recall_Summary_Endure_Pregnancy_Test_Strip.pdf
+2025-09-08 11:44:54,537 [DEBUG] https://fdaghana.gov.gh:443 "GET /ryverna-10mg-ml-solution-crizanlizumab/ HTTP/1.1" 200 None
+2025-09-08 11:44:57,693 [INFO] Saved fallback PDF for Ryverna_10mgml_solution: recalls/Ryverna_10mgml_solution/Recall_Summary_Ryverna_10mgml_solution.pdf
+2025-09-08 11:44:59,207 [DEBUG] https://fdaghana.gov.gh:443 "GET /ryverna-10mg-ml-solution-crizanlizumab-2/ HTTP/1.1" 404 None
+2025-09-08 11:45:02,345 [INFO] Saved fallback PDF for Bel_Aqua_Mineral_Water: recalls/Bel_Aqua_Mineral_Water/Recall_Summary_Bel_Aqua_Mineral_Water.pdf
+2025-09-08 11:45:03,720 [DEBUG] https://fdaghana.gov.gh:443 "GET /clean-best-zone/ HTTP/1.1" 200 None
+2025-09-08 11:45:07,407 [INFO] Saved fallback PDF for Clean_Best_Zone: recalls/Clean_Best_Zone/Recall_Summary_Clean_Best_Zone.pdf
+2025-09-08 11:45:09,012 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Beltcoin%20Oxytocin%20Injection%20BP HTTP/1.1" 404 None
+2025-09-08 11:45:13,125 [INFO] Saved fallback PDF for Beltcoin_Oxytocin_Injection_BP: recalls/Beltcoin_Oxytocin_Injection_BP/Recall_Summary_Beltcoin_Oxytocin_Injection_BP.pdf
+2025-09-08 11:45:14,562 [DEBUG] https://fdaghana.gov.gh:443 "GET /venetocin-oxytocin-injection-bp/ HTTP/1.1" 200 None
+2025-09-08 11:45:20,825 [INFO] Saved fallback PDF for Venetocin_Oxytocin_Injection_BP: recalls/Venetocin_Oxytocin_Injection_BP/Recall_Summary_Venetocin_Oxytocin_Injection_BP.pdf
+2025-09-08 11:45:20,828 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:45:22,803 [DEBUG] https://fdaghana.gov.gh:443 "GET /wipe-bleach/ HTTP/1.1" 200 None
+2025-09-08 11:45:27,998 [INFO] Saved fallback PDF for Wipe_Bleach: recalls/Wipe_Bleach/Recall_Summary_Wipe_Bleach.pdf
+2025-09-08 11:45:28,094 [ERROR] Failed to scrape detail page for Amedin_5mg_and_10mg: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-09-08 11:45:28,095 [INFO] Saved fallback PDF for Amedin_5mg_and_10mg: recalls/Amedin_5mg_and_10mg/Recall_Summary_Amedin_5mg_and_10mg.pdf
+2025-09-08 11:45:28,098 [DEBUG] Starting new HTTPS connection (3): fdaghana.gov.gh:443
+2025-09-08 11:45:30,150 [DEBUG] https://fdaghana.gov.gh:443 "GET /fluphenazine-decanoate-25mg-ml/ HTTP/1.1" 200 None
+2025-09-08 11:45:36,831 [INFO] Saved fallback PDF for Fluphenazine_Decanoate_25mgml: recalls/Fluphenazine_Decanoate_25mgml/Recall_Summary_Fluphenazine_Decanoate_25mgml.pdf
+2025-09-08 11:45:36,834 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:45:38,793 [DEBUG] https://fdaghana.gov.gh:443 "GET /haloperidol-decanoate-50mg-5ml/ HTTP/1.1" 200 None
+2025-09-08 11:45:46,021 [INFO] Saved fallback PDF for Haloperidol_Decanoate_50mg5ml: recalls/Haloperidol_Decanoate_50mg5ml/Recall_Summary_Haloperidol_Decanoate_50mg5ml.pdf
+2025-09-08 11:45:46,024 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:45:47,883 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Glibetics(Glibenclamide%20Tablets%20BP%205mg) HTTP/1.1" 301 0
+2025-09-08 11:45:49,576 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Glibetics(Glibenclamide%20Tablets%20BP%205mg HTTP/1.1" 404 None
+2025-09-08 11:46:02,031 [INFO] Saved fallback PDF for GlibeticsGlibenclamide_Tablets_BP_5mg: recalls/GlibeticsGlibenclamide_Tablets_BP_5mg/Recall_Summary_GlibeticsGlibenclamide_Tablets_BP_5mg.pdf
+2025-09-08 11:46:02,036 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:46:04,202 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Jess%20Hydrogen%20Peroxide HTTP/1.1" 404 None
+2025-09-08 11:46:11,330 [INFO] Saved fallback PDF for Jess_Hydrogen_Peroxide: recalls/Jess_Hydrogen_Peroxide/Recall_Summary_Jess_Hydrogen_Peroxide.pdf
+2025-09-08 11:46:11,334 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:46:13,590 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Entrance%20Oxytocin%20Injection HTTP/1.1" 404 None
+2025-09-08 11:46:22,638 [INFO] Saved fallback PDF for Entrance_Oxytocin_Injection: recalls/Entrance_Oxytocin_Injection/Recall_Summary_Entrance_Oxytocin_Injection.pdf
+2025-09-08 11:46:22,642 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:46:25,321 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Diprofos%207mg/ml%202ml%20Amp HTTP/1.1" 404 None
+2025-09-08 11:46:36,475 [INFO] Saved fallback PDF for Diprofos_7mgml_2ml_Amp: recalls/Diprofos_7mgml_2ml_Amp/Recall_Summary_Diprofos_7mgml_2ml_Amp.pdf
+2025-09-08 11:46:36,479 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:46:38,089 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Vynif-30%20(Nifedipine%20Extended-Release%20Tqablet%2030mg) HTTP/1.1" 301 0
+2025-09-08 11:46:39,667 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Vynif-30%20(Nifedipine%20Extended-Release%20Tqablet%2030mg HTTP/1.1" 404 None
+2025-09-08 11:46:48,288 [INFO] Saved fallback PDF for Vynif-30_Nifedipine_Extended-Release_Tqablet_30mg: recalls/Vynif-30_Nifedipine_Extended-Release_Tqablet_30mg/Recall_Summary_Vynif-30_Nifedipine_Extended-Release_Tqablet_30mg.pdf
+2025-09-08 11:46:48,291 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:46:50,483 [DEBUG] https://fdaghana.gov.gh:443 "GET /vernetocin-oxytocin-injection-bp/ HTTP/1.1" 200 None
+2025-09-08 11:46:55,402 [INFO] Saved fallback PDF for Vernetocin_Oxytocin_Injection_BP: recalls/Vernetocin_Oxytocin_Injection_BP/Recall_Summary_Vernetocin_Oxytocin_Injection_BP.pdf
+2025-09-08 11:46:56,879 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Losar-Denk%20100,%2050%20,%20Colosar-Denk%2050/12.5%20,%20Colosar-Denk%20100/12.5 HTTP/1.1" 404 None
+2025-09-08 11:46:58,944 [INFO] Saved fallback PDF for Losar-Denk_100_50__Colosar-Denk_50125__Colosar-Denk_100125: recalls/Losar-Denk_100_50__Colosar-Denk_50125__Colosar-Denk_100125/Recall_Summary_Losar-Denk_100_50__Colosar-Denk_50125__Colosar-Denk_100125.pdf
+2025-09-08 11:47:00,455 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Stopkof%20Cough%20Syrup%20Baby%20Formula HTTP/1.1" 404 None
+2025-09-08 11:47:02,848 [INFO] Saved fallback PDF for Stopkof_Cough_Syrup_Baby_Formula: recalls/Stopkof_Cough_Syrup_Baby_Formula/Recall_Summary_Stopkof_Cough_Syrup_Baby_Formula.pdf
+2025-09-08 11:47:04,494 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Skyclav%20(Amoxicilin%20and%20Clavulate,%20Potassium%20for%20Oral%20Suspension)%20USP%20Strenght:%20228.5/5ml HTTP/1.1" 404 None
+2025-09-08 11:47:11,172 [INFO] Saved fallback PDF for Skyclav_Amoxicilin_and_Clavulate_Potassium_for_Oral_Suspension_USP_Strenght_22855ml: recalls/Skyclav_Amoxicilin_and_Clavulate_Potassium_for_Oral_Suspension_USP_Strenght_22855ml/Recall_Summary_Skyclav_Amoxicilin_and_Clavulate_Potassium_for_Oral_Suspension_USP_Strenght_22855ml.pdf
+2025-09-08 11:47:11,176 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:47:14,996 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Risperidione%20Tablets HTTP/1.1" 404 None
+2025-09-08 11:47:23,071 [INFO] Saved fallback PDF for Risperidione_Tablets: recalls/Risperidione_Tablets/Recall_Summary_Risperidione_Tablets.pdf
+2025-09-08 11:47:23,075 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:47:25,769 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Lorazepam%20BP%202mg%20tablets HTTP/1.1" 404 None
+2025-09-08 11:47:34,638 [INFO] Saved fallback PDF for Lorazepam_BP_2mg_tablets: recalls/Lorazepam_BP_2mg_tablets/Recall_Summary_Lorazepam_BP_2mg_tablets.pdf
+2025-09-08 11:47:34,643 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:47:36,724 [DEBUG] https://fdaghana.gov.gh:443 "GET /mr-q-liquid/ HTTP/1.1" 200 None
+2025-09-08 11:47:41,992 [INFO] Saved fallback PDF for Mr_Q_Liquid: recalls/Mr_Q_Liquid/Recall_Summary_Mr_Q_Liquid.pdf
+2025-09-08 11:47:42,037 [ERROR] Failed to scrape detail page for Novadopa_250mg: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-09-08 11:47:42,038 [INFO] Saved fallback PDF for Novadopa_250mg: recalls/Novadopa_250mg/Recall_Summary_Novadopa_250mg.pdf
+2025-09-08 11:47:42,039 [DEBUG] Starting new HTTPS connection (4): fdaghana.gov.gh:443
+2025-09-08 11:47:44,181 [DEBUG] https://fdaghana.gov.gh:443 "GET /albendazole-tablets-400mg/ HTTP/1.1" 200 None
+2025-09-08 11:47:49,905 [INFO] Saved fallback PDF for Albendazole_Tablets_400mg: recalls/Albendazole_Tablets_400mg/Recall_Summary_Albendazole_Tablets_400mg.pdf
+2025-09-08 11:47:49,908 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:47:51,835 [DEBUG] https://fdaghana.gov.gh:443 "GET /gen-aid-injection-gentamicin-sulphate-injection-80mg-2ml/ HTTP/1.1" 200 None
+2025-09-08 11:47:57,641 [INFO] Saved fallback PDF for Gen-Aid_Injection_Gentamicin_Sulphate_injection_Strength_80mg2ml: recalls/Gen-Aid_Injection_Gentamicin_Sulphate_injection_Strength_80mg2ml/Recall_Summary_Gen-Aid_Injection_Gentamicin_Sulphate_injection_Strength_80mg2ml.pdf
+2025-09-08 11:47:57,643 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:47:59,527 [DEBUG] https://fdaghana.gov.gh:443 "GET /cefoson-suspension-cefuroxime-axetil-oral-suspension-125mg-5ml/ HTTP/1.1" 200 None
+2025-09-08 11:48:06,860 [INFO] Saved fallback PDF for Cefoson_Suspension_Cefuroxime_Axetil_Oral_Suspension_125mg5ml: recalls/Cefoson_Suspension_Cefuroxime_Axetil_Oral_Suspension_125mg5ml/Recall_Summary_Cefoson_Suspension_Cefuroxime_Axetil_Oral_Suspension_125mg5ml.pdf
+2025-09-08 11:48:06,863 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:48:08,919 [DEBUG] https://fdaghana.gov.gh:443 "GET /clean-best-zone/ HTTP/1.1" 200 None
+2025-09-08 11:48:16,559 [INFO] Saved fallback PDF for Smile_Chlorine: recalls/Smile_Chlorine/Recall_Summary_Smile_Chlorine.pdf
+2025-09-08 11:48:16,561 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:48:18,836 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-recalls-and-alerts/Clauvunova%20625mg HTTP/1.1" 404 None
+2025-09-08 11:48:24,829 [INFO] Saved fallback PDF for Clauvunova_625mg: recalls/Clauvunova_625mg/Recall_Summary_Clauvunova_625mg.pdf
+2025-09-08 11:48:24,831 [INFO] Saved fallback PDF for Product_Name: recalls/Product_Name/Recall_Summary_Product_Name.pdf
+2025-09-08 11:48:24,834 [INFO] Scraping complete.
+2025-09-08 11:48:24,834 [INFO] Starting FDA Ghana Alerts Scraper...
+2025-09-08 11:48:24,835 [DEBUG] Using selector: KqueueSelector
+2025-09-08 11:48:59,615 [WARNING] DataTable not found, using basic table
+2025-09-08 11:48:59,705 [INFO] Found 10 alert entries.
+2025-09-08 11:48:59,705 [DEBUG] Row 1: ['07/07/2025', 'SAFETY ALERT - Distribution and Sale of unwholesome Batches of Pharmaceutical Product-Paradenk Suppositories']
+2025-09-08 11:48:59,705 [DEBUG] Row 2: ['25/06/2025', 'Unregistered Oxytocin Injection 10iu/ml (A-Tocin Injection and Derm Oxytocin  Injection) in Ghana']
+2025-09-08 11:48:59,705 [DEBUG] Row 3: ['05/06/2025', 'Public Health Alert Against the Purchase and Use of Counterfeit Herceptin® 600mg/5ml in Vial (Trastuzumab Solution for Injection)  in Ghana']
+2025-09-08 11:48:59,705 [INFO] Processing alert 1: SAFETY ALERT - Distribution and Sale of unwholesom...
+2025-09-08 11:48:59,705 [INFO] Attempting to download alert PDF: https://fdaghana.gov.gh/wp-content/uploads/2025/07/Paradenk-Alert.pdf
+2025-09-08 11:48:59,706 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:49:01,994 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2025/07/Paradenk-Alert.pdf HTTP/1.1" 200 139386
+2025-09-08 11:49:04,894 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2025/07/Paradenk-Alert.pdf: 200, content-type: application/pdf
+2025-09-08 11:49:04,895 [INFO] Downloaded alert PDF: alerts/Alert_SAFETY_ALERT_-_Distribution_and_Sale_of_unwholesome_Batches__20250707.pdf
+2025-09-08 11:49:04,932 [INFO] Extracted 2432 characters from PDF
+2025-09-08 11:49:04,934 [INFO] Processing alert 2: Unregistered Oxytocin Injection 10iu/ml (A-Tocin I...
+2025-09-08 11:49:04,934 [INFO] Attempting to download alert PDF: https://fdaghana.gov.gh/wp-content/uploads/2025/06/Oxytocin_ALERT.pdf
+2025-09-08 11:49:05,264 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2025/06/Oxytocin_ALERT.pdf HTTP/1.1" 200 480787
+2025-09-08 11:49:09,573 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2025/06/Oxytocin_ALERT.pdf: 200, content-type: application/pdf
+2025-09-08 11:49:09,575 [INFO] Downloaded alert PDF: alerts/Alert_Unregistered_Oxytocin_Injection_10iuml_A-Tocin_Injection_and_20250625.pdf
+2025-09-08 11:49:09,627 [INFO] Extracted 4157 characters from PDF
+2025-09-08 11:49:09,630 [INFO] Processing alert 3: Public Health Alert Against the Purchase and Use o...
+2025-09-08 11:49:09,630 [INFO] Attempting to download alert PDF: https://fdaghana.gov.gh/wp-content/uploads/2025/06/Herceptin-alert_Q2.pdf
+2025-09-08 11:49:09,975 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2025/06/Herceptin-alert_Q2.pdf HTTP/1.1" 200 269371
+2025-09-08 11:49:11,843 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2025/06/Herceptin-alert_Q2.pdf: 200, content-type: application/pdf
+2025-09-08 11:49:11,844 [INFO] Downloaded alert PDF: alerts/Alert_Public_Health_Alert_Against_the_Purchase_and_Use_of_Counterf_20250605.pdf
+2025-09-08 11:49:11,883 [INFO] Extracted 3700 characters from PDF
+2025-09-08 11:49:11,884 [INFO] Processing alert 4: Unregistered Product – Samsu Super Oil...
+2025-09-08 11:49:11,885 [INFO] Attempting to download alert PDF: https://fdaghana.gov.gh/wp-content/uploads/2025/06/SAMSU-SUPER-OIL-ALERT.pdf
+2025-09-08 11:49:12,228 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2025/06/SAMSU-SUPER-OIL-ALERT.pdf HTTP/1.1" 200 432947
+2025-09-08 11:49:15,745 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2025/06/SAMSU-SUPER-OIL-ALERT.pdf: 200, content-type: application/pdf
+2025-09-08 11:49:15,746 [INFO] Downloaded alert PDF: alerts/Alert_Unregistered_Product__Samsu_Super_Oil_20250605.pdf
+2025-09-08 11:49:15,774 [INFO] Extracted 2796 characters from PDF
+2025-09-08 11:49:15,776 [INFO] Processing alert 5: MEDICAL PRODUCT ALERT 1 - UNREGISTERED MEDICAL PRO...
+2025-09-08 11:49:15,777 [INFO] Attempting to download alert PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/Chinese-products-ALERT_1.pdf
+2025-09-08 11:49:16,092 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/Chinese-products-ALERT_1.pdf HTTP/1.1" 200 1045172
+2025-09-08 11:49:25,400 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/Chinese-products-ALERT_1.pdf: 200, content-type: application/pdf
+2025-09-08 11:49:25,404 [INFO] Downloaded alert PDF: alerts/Alert_MEDICAL_PRODUCT_ALERT_1_-_UNREGISTERED_MEDICAL_PRODUCTS_WITH_20240903.pdf
+2025-09-08 11:49:25,450 [INFO] Extracted 2908 characters from PDF
+2025-09-08 11:49:25,452 [INFO] Processing alert 6: MEDICAL PRODUCT ALERT 2 - FALSIFIED OZEMPIC (SEMAG...
+2025-09-08 11:49:25,452 [INFO] Attempting to download alert PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/Ozempic-ALERT_2.pdf
+2025-09-08 11:49:25,453 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:49:26,458 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/Ozempic-ALERT_2.pdf HTTP/1.1" 200 196741
+2025-09-08 11:49:29,938 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/Ozempic-ALERT_2.pdf: 200, content-type: application/pdf
+2025-09-08 11:49:29,939 [INFO] Downloaded alert PDF: alerts/Alert_MEDICAL_PRODUCT_ALERT_2_-_FALSIFIED_OZEMPIC_SEMAGLUTIDE_INJE_20240903.pdf
+2025-09-08 11:49:29,982 [INFO] Extracted 2893 characters from PDF
+2025-09-08 11:49:29,983 [INFO] Processing alert 7: SAFETY ALERT ON ILLEGAL SALE OF SUBSTANDARD AND FA...
+2025-09-08 11:49:29,983 [INFO] Attempting to download alert PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/10/Illegal-Sale-of-Substandard-and-Falsified-Colamar-Oral-Suspension.pdf
+2025-09-08 11:49:30,357 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/10/Illegal-Sale-of-Substandard-and-Falsified-Colamar-Oral-Suspension.pdf HTTP/1.1" 200 689451
+2025-09-08 11:49:43,119 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/10/Illegal-Sale-of-Substandard-and-Falsified-Colamar-Oral-Suspension.pdf: 200, content-type: application/pdf
+2025-09-08 11:49:43,122 [INFO] Downloaded alert PDF: alerts/Alert_SAFETY_ALERT_ON_ILLEGAL_SALE_OF_SUBSTANDARD_AND_FALSIFIED_CO_20240824.pdf
+2025-09-08 11:49:43,205 [INFO] Extracted 7843 characters from PDF
+2025-09-08 11:49:43,207 [INFO] Processing alert 8: ARTIFICIAL RIPENING OF MANGOES...
+2025-09-08 11:49:43,207 [INFO] Attempting to download alert PDF: https://fdaghana.gov.gh/newsroom/product-alerts/ARTIFICIAL RIPENING OF MANGOES
+2025-09-08 11:49:43,207 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:49:45,879 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-alerts/ARTIFICIAL%20RIPENING%20OF%20MANGOES HTTP/1.1" 404 None
+2025-09-08 11:49:56,864 [INFO] HTTP status for https://fdaghana.gov.gh/newsroom/product-alerts/ARTIFICIAL RIPENING OF MANGOES: 404, content-type: text/html; charset=UTF-8
+2025-09-08 11:49:56,865 [WARNING] Alert PDF not found: https://fdaghana.gov.gh/newsroom/product-alerts/ARTIFICIAL RIPENING OF MANGOES (status 404)
+2025-09-08 11:49:56,867 [INFO] Saved fallback alert PDF: alerts/Alert_ARTIFICIAL_RIPENING_OF_MANGOES_20240417.pdf
+2025-09-08 11:49:56,871 [INFO] Processing alert 9: CONTAMINATED BENYLIN PAEDIATRIC SYRUP (100MLS), LO...
+2025-09-08 11:49:56,871 [INFO] Attempting to download alert PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/1-ALERT-ON-CONTAMINATED-BENYLIN-PAEDIATRIC-SYRUP.pdf
+2025-09-08 11:49:56,873 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:49:57,930 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/1-ALERT-ON-CONTAMINATED-BENYLIN-PAEDIATRIC-SYRUP.pdf HTTP/1.1" 200 1087773
+2025-09-08 11:50:14,194 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/1-ALERT-ON-CONTAMINATED-BENYLIN-PAEDIATRIC-SYRUP.pdf: 200, content-type: application/pdf
+2025-09-08 11:50:14,197 [INFO] Downloaded alert PDF: alerts/Alert_CONTAMINATED_BENYLIN_PAEDIATRIC_SYRUP_100MLS_LOT_NO_329304_20240413.pdf
+2025-09-08 11:50:14,200 [INFO] Attempting OCR extraction for alerts/Alert_CONTAMINATED_BENYLIN_PAEDIATRIC_SYRUP_100MLS_LOT_NO_329304_20240413.pdf
+2025-09-08 11:50:14,214 [ERROR] OCR extraction failed for alerts/Alert_CONTAMINATED_BENYLIN_PAEDIATRIC_SYRUP_100MLS_LOT_NO_329304_20240413.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-09-08 11:50:14,223 [INFO] Processing alert 10: DIABOOST - PRODUCT ALERT...
+2025-09-08 11:50:14,224 [INFO] Attempting to download alert PDF: https://fdaghana.gov.gh/newsroom/product-alerts/DIABOOST - PRODUCT ALERT
+2025-09-08 11:50:14,230 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:50:16,404 [DEBUG] https://fdaghana.gov.gh:443 "GET /newsroom/product-alerts/DIABOOST%20-%20PRODUCT%20ALERT HTTP/1.1" 404 None
+2025-09-08 11:50:22,063 [INFO] HTTP status for https://fdaghana.gov.gh/newsroom/product-alerts/DIABOOST - PRODUCT ALERT: 404, content-type: text/html; charset=UTF-8
+2025-09-08 11:50:22,063 [WARNING] Alert PDF not found: https://fdaghana.gov.gh/newsroom/product-alerts/DIABOOST - PRODUCT ALERT (status 404)
+2025-09-08 11:50:22,064 [INFO] Saved fallback alert PDF: alerts/Alert_DIABOOST_-_PRODUCT_ALERT_20231013.pdf
+2025-09-08 11:50:22,066 [INFO] Starting FDA Ghana Press Releases Scraper...
+2025-09-08 11:50:22,067 [DEBUG] Using selector: KqueueSelector
+2025-09-08 11:50:58,407 [INFO] Press releases table found and loaded
+2025-09-08 11:51:00,530 [INFO] Found 35 press release entries.
+2025-09-08 11:51:00,530 [DEBUG] Press Release Row 1: ['18/05/2025', 'Public Caution: KINGS ORANGE FLAVOURED LIQUEUR AND JUPITER 1990 ARE UNSAFE FOR CONSUMPTION']
+2025-09-08 11:51:00,530 [DEBUG] Press Release Row 2: ['06/05/2025', 'Court Upholds FDAs Action to Protect Public Health from Expired Products']
+2025-09-08 11:51:00,530 [DEBUG] Press Release Row 3: ['28/02/2025', 'RE: KNUST STUDY ON BANNED SUBSTANCES IN TOMATO PASTE']
+2025-09-08 11:51:00,531 [INFO] Processing press release 1: Public Caution: KINGS ORANGE FLAVOURED LIQUEUR AND...
+2025-09-08 11:51:00,531 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2025/05/Public-Caution-KINGS-ORANGE-FLAVOURED-LIQUEUR-AND-JUPITER-1990-ARE-UNSAFE-FOR-CONSUMPTION.pdf
+2025-09-08 11:51:00,532 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:51:01,600 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2025/05/Public-Caution-KINGS-ORANGE-FLAVOURED-LIQUEUR-AND-JUPITER-1990-ARE-UNSAFE-FOR-CONSUMPTION.pdf HTTP/1.1" 200 409278
+2025-09-08 11:51:09,269 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2025/05/Public-Caution-KINGS-ORANGE-FLAVOURED-LIQUEUR-AND-JUPITER-1990-ARE-UNSAFE-FOR-CONSUMPTION.pdf: 200, content-type: application/pdf
+2025-09-08 11:51:09,271 [INFO] Downloaded press release PDF: press_releases/Public_Caution_KINGS_ORANGE_FLAVOURED_LIQUEUR_AND_JUPITER_19_20250518.pdf
+2025-09-08 11:51:09,390 [INFO] Extracted 10817 characters from PDF
+2025-09-08 11:51:09,394 [INFO] Processing press release 2: Court Upholds FDAs Action to Protect Public Health...
+2025-09-08 11:51:09,394 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2025/05/Court-Upholds-FDAs-Action-to-Protect-Public-Health-from-Expired-Products.pdf
+2025-09-08 11:51:09,394 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:51:10,537 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2025/05/Court-Upholds-FDAs-Action-to-Protect-Public-Health-from-Expired-Products.pdf HTTP/1.1" 200 272571
+2025-09-08 11:51:16,781 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2025/05/Court-Upholds-FDAs-Action-to-Protect-Public-Health-from-Expired-Products.pdf: 200, content-type: application/pdf
+2025-09-08 11:51:16,783 [INFO] Downloaded press release PDF: press_releases/Court_Upholds_FDAs_Action_to_Protect_Public_Health_from_Expi_20250506.pdf
+2025-09-08 11:51:16,845 [INFO] Extracted 3298 characters from PDF
+2025-09-08 11:51:16,847 [INFO] Processing press release 3: RE: KNUST STUDY ON BANNED SUBSTANCES IN TOMATO PAS...
+2025-09-08 11:51:16,847 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2025/02/KNUST-Study-on-Banned-Substances-in-Tomato-Paste.pdf
+2025-09-08 11:51:16,848 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:51:17,888 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2025/02/KNUST-Study-on-Banned-Substances-in-Tomato-Paste.pdf HTTP/1.1" 200 1492931
+2025-09-08 11:51:29,874 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2025/02/KNUST-Study-on-Banned-Substances-in-Tomato-Paste.pdf: 200, content-type: application/pdf
+2025-09-08 11:51:29,876 [INFO] Downloaded press release PDF: press_releases/RE_KNUST_STUDY_ON_BANNED_SUBSTANCES_IN_TOMATO_PASTE_20250228.pdf
+2025-09-08 11:51:30,035 [INFO] Extracted 15187 characters from PDF
+2025-09-08 11:51:30,038 [INFO] Processing press release 4: FDA RESPONDS TO BBC AFRICA EYE INVESTIGATION: WHO ...
+2025-09-08 11:51:30,038 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2025/02/FDA-Responds-to-BBC-Africa-Eye-Investigation-Who-is-Flooding-West-Africa-with-Opioids.pdf
+2025-09-08 11:51:30,038 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:51:31,066 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2025/02/FDA-Responds-to-BBC-Africa-Eye-Investigation-Who-is-Flooding-West-Africa-with-Opioids.pdf HTTP/1.1" 200 1434921
+2025-09-08 11:51:52,670 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2025/02/FDA-Responds-to-BBC-Africa-Eye-Investigation-Who-is-Flooding-West-Africa-with-Opioids.pdf: 200, content-type: application/pdf
+2025-09-08 11:51:52,674 [INFO] Downloaded press release PDF: press_releases/FDA_RESPONDS_TO_BBC_AFRICA_EYE_INVESTIGATION_WHO_IS_FLOODING_20250226.pdf
+2025-09-08 11:51:52,894 [INFO] Extracted 56790 characters from PDF
+2025-09-08 11:51:52,898 [INFO] Processing press release 5: 2024 WORLD NO TOBACCO DAY - PROTECTING CHILDREN FR...
+2025-09-08 11:51:52,898 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/WORLD-NO-TOBACCO-DAY-2024.pdf
+2025-09-08 11:51:52,898 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:51:54,007 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/WORLD-NO-TOBACCO-DAY-2024.pdf HTTP/1.1" 200 1410316
+2025-09-08 11:52:09,805 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/WORLD-NO-TOBACCO-DAY-2024.pdf: 200, content-type: application/pdf
+2025-09-08 11:52:09,809 [INFO] Downloaded press release PDF: press_releases/2024_WORLD_NO_TOBACCO_DAY_-_PROTECTING_CHILDREN_FROM_TOBACCO_20240531.pdf
+2025-09-08 11:52:09,811 [INFO] Attempting OCR extraction for press_releases/2024_WORLD_NO_TOBACCO_DAY_-_PROTECTING_CHILDREN_FROM_TOBACCO_20240531.pdf
+2025-09-08 11:52:09,818 [ERROR] OCR extraction failed for press_releases/2024_WORLD_NO_TOBACCO_DAY_-_PROTECTING_CHILDREN_FROM_TOBACCO_20240531.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-09-08 11:52:09,821 [INFO] Processing press release 6: FDA ALLAYS CONCERNS OF ASTRAZENECA COVID-19 VACCIN...
+2025-09-08 11:52:09,822 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/FDA-Allays-Concerns-Over-AstraZeneca-COVID.pdf
+2025-09-08 11:52:09,825 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:52:10,881 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/FDA-Allays-Concerns-Over-AstraZeneca-COVID.pdf HTTP/1.1" 200 346259
+2025-09-08 11:52:15,157 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/FDA-Allays-Concerns-Over-AstraZeneca-COVID.pdf: 200, content-type: application/pdf
+2025-09-08 11:52:15,160 [INFO] Downloaded press release PDF: press_releases/FDA_ALLAYS_CONCERNS_OF_ASTRAZENECA_COVID-19_VACCINE_SAFETY_I_20240521.pdf
+2025-09-08 11:52:15,242 [INFO] Extracted 9741 characters from PDF
+2025-09-08 11:52:15,245 [INFO] Processing press release 7: JOINT PRESS RELEASE BY THE FDA, GRA CUSTOMS DIVISI...
+2025-09-08 11:52:15,245 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/signed-joint-press-release.pdf
+2025-09-08 11:52:15,541 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/signed-joint-press-release.pdf HTTP/1.1" 200 188319
+2025-09-08 11:52:18,112 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/signed-joint-press-release.pdf: 200, content-type: application/pdf
+2025-09-08 11:52:18,115 [INFO] Downloaded press release PDF: press_releases/JOINT_PRESS_RELEASE_BY_THE_FDA_GRA_CUSTOMS_DIVISION_AND_GSA_20230707.pdf
+2025-09-08 11:52:18,118 [WARNING] unknown widths : 
+[0, IndirectObject(103, 0, 4547333456)]
+2025-09-08 11:52:18,119 [WARNING] unknown widths : 
+[0, IndirectObject(98, 0, 4547333456)]
+2025-09-08 11:52:18,141 [WARNING] unknown widths : 
+[0, IndirectObject(71, 0, 4547333456)]
+2025-09-08 11:52:18,142 [WARNING] unknown widths : 
+[0, IndirectObject(66, 0, 4547333456)]
+2025-09-08 11:52:18,142 [WARNING] unknown widths : 
+[0, IndirectObject(61, 0, 4547333456)]
+2025-09-08 11:52:18,143 [WARNING] unknown widths : 
+[0, IndirectObject(56, 0, 4547333456)]
+2025-09-08 11:52:18,143 [WARNING] unknown widths : 
+[0, IndirectObject(51, 0, 4547333456)]
+2025-09-08 11:52:18,144 [WARNING] unknown widths : 
+[0, IndirectObject(83, 0, 4547333456)]
+2025-09-08 11:52:18,144 [WARNING] unknown widths : 
+[0, IndirectObject(46, 0, 4547333456)]
+2025-09-08 11:52:18,144 [WARNING] unknown widths : 
+[0, IndirectObject(41, 0, 4547333456)]
+2025-09-08 11:52:18,145 [WARNING] unknown widths : 
+[0, IndirectObject(36, 0, 4547333456)]
+2025-09-08 11:52:18,145 [WARNING] unknown widths : 
+[0, IndirectObject(31, 0, 4547333456)]
+2025-09-08 11:52:18,148 [INFO] Extracted 2432 characters from PDF
+2025-09-08 11:52:18,150 [INFO] Processing press release 8: FDA STRENGTHENS REGULATIONS ON ELECTRONIC NICOTINE...
+2025-09-08 11:52:18,150 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/FDA-STRENGTHENS-REGULATIONS-ON-ELECTRONIC-NICOTINE-DELIVERY-SYSTEMSENDS_VAPES.pdf
+2025-09-08 11:52:18,505 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/FDA-STRENGTHENS-REGULATIONS-ON-ELECTRONIC-NICOTINE-DELIVERY-SYSTEMSENDS_VAPES.pdf HTTP/1.1" 200 527104
+2025-09-08 11:52:23,533 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/FDA-STRENGTHENS-REGULATIONS-ON-ELECTRONIC-NICOTINE-DELIVERY-SYSTEMSENDS_VAPES.pdf: 200, content-type: application/pdf
+2025-09-08 11:52:23,537 [INFO] Downloaded press release PDF: press_releases/FDA_STRENGTHENS_REGULATIONS_ON_ELECTRONIC_NICOTINE_DELIVERY__20230705.pdf
+2025-09-08 11:52:23,538 [INFO] Attempting OCR extraction for press_releases/FDA_STRENGTHENS_REGULATIONS_ON_ELECTRONIC_NICOTINE_DELIVERY__20230705.pdf
+2025-09-08 11:52:23,550 [ERROR] OCR extraction failed for press_releases/FDA_STRENGTHENS_REGULATIONS_ON_ELECTRONIC_NICOTINE_DELIVERY__20230705.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-09-08 11:52:23,556 [INFO] Processing press release 9: 2023 WORLD NO TOBACCO DAY-GROWING SUSTAINABLE FOOD...
+2025-09-08 11:52:23,557 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/2023-WNTD-Press-Release-1.pdf
+2025-09-08 11:52:23,611 [ERROR] Failed to download press release for '2023 WORLD NO TOBACCO DAY-GROWING SUSTAINABLE FOOD CROPS INSTEAD OF TOBACCO' at https://fdaghana.gov.gh/wp-content/uploads/2024/09/2023-WNTD-Press-Release-1.pdf: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-09-08 11:52:23,614 [INFO] Processing press release 10: COMMUNICATION OF UPDATED GUIDANCE - PROPER PLATFOR...
+2025-09-08 11:52:23,614 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/PHASE-2.pdf
+2025-09-08 11:52:23,615 [DEBUG] Starting new HTTPS connection (5): fdaghana.gov.gh:443
+2025-09-08 11:52:24,608 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/PHASE-2.pdf HTTP/1.1" 200 557120
+2025-09-08 11:52:30,983 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/PHASE-2.pdf: 200, content-type: application/pdf
+2025-09-08 11:52:30,985 [INFO] Downloaded press release PDF: press_releases/COMMUNICATION_OF_UPDATED_GUIDANCE_-_PROPER_PLATFORM_FOR_ELEC_20230323.pdf
+2025-09-08 11:52:30,988 [INFO] Attempting OCR extraction for press_releases/COMMUNICATION_OF_UPDATED_GUIDANCE_-_PROPER_PLATFORM_FOR_ELEC_20230323.pdf
+2025-09-08 11:52:30,997 [ERROR] OCR extraction failed for press_releases/COMMUNICATION_OF_UPDATED_GUIDANCE_-_PROPER_PLATFORM_FOR_ELEC_20230323.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-09-08 11:52:31,000 [INFO] Processing press release 11: EMBOSSMENT OF HOLOGRAMS ON FDA CERTIFICATES AND PE...
+2025-09-08 11:52:31,001 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/Embossment-of-Holograms-on-FDA-Certificates-and-Permit.pdf
+2025-09-08 11:52:31,005 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:52:32,070 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/Embossment-of-Holograms-on-FDA-Certificates-and-Permit.pdf HTTP/1.1" 200 249626
+2025-09-08 11:52:35,602 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/Embossment-of-Holograms-on-FDA-Certificates-and-Permit.pdf: 200, content-type: application/pdf
+2025-09-08 11:52:35,603 [INFO] Downloaded press release PDF: press_releases/EMBOSSMENT_OF_HOLOGRAMS_ON_FDA_CERTIFICATES_AND_PERMIT_20221111.pdf
+2025-09-08 11:52:35,604 [INFO] Attempting OCR extraction for press_releases/EMBOSSMENT_OF_HOLOGRAMS_ON_FDA_CERTIFICATES_AND_PERMIT_20221111.pdf
+2025-09-08 11:52:35,613 [ERROR] OCR extraction failed for press_releases/EMBOSSMENT_OF_HOLOGRAMS_ON_FDA_CERTIFICATES_AND_PERMIT_20221111.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-09-08 11:52:35,616 [INFO] Processing press release 12: BERLIN DECLARATION...
+2025-09-08 11:52:35,617 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/Press-release-Berlin-declaration_embargo-19-July.pdf
+2025-09-08 11:52:35,975 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/Press-release-Berlin-declaration_embargo-19-July.pdf HTTP/1.1" 200 151926
+2025-09-08 11:52:37,954 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/Press-release-Berlin-declaration_embargo-19-July.pdf: 200, content-type: application/pdf
+2025-09-08 11:52:37,956 [INFO] Downloaded press release PDF: press_releases/BERLIN_DECLARATION_20220720.pdf
+2025-09-08 11:52:38,023 [INFO] Extracted 7709 characters from PDF
+2025-09-08 11:52:38,025 [INFO] Processing press release 13: FDA STATEMENT ON THE ALLEGED "PLASTIC" RICE ON THE...
+2025-09-08 11:52:38,025 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/Document-3-1.pdf
+2025-09-08 11:52:38,345 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/Document-3-1.pdf HTTP/1.1" 200 658895
+2025-09-08 11:52:51,412 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/Document-3-1.pdf: 200, content-type: application/pdf
+2025-09-08 11:52:51,415 [INFO] Downloaded press release PDF: press_releases/FDA_STATEMENT_ON_THE_ALLEGED_PLASTIC_RICE_ON_THE_GHANAIAN_MA_20220612.pdf
+2025-09-08 11:52:51,418 [INFO] Attempting OCR extraction for press_releases/FDA_STATEMENT_ON_THE_ALLEGED_PLASTIC_RICE_ON_THE_GHANAIAN_MA_20220612.pdf
+2025-09-08 11:52:51,424 [ERROR] OCR extraction failed for press_releases/FDA_STATEMENT_ON_THE_ALLEGED_PLASTIC_RICE_ON_THE_GHANAIAN_MA_20220612.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-09-08 11:52:51,427 [INFO] Processing press release 14: FDA COMMEMORATES WORLD FOOD SAFETY DAY...
+2025-09-08 11:52:51,427 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/Press-Release-GIZ-EU-FDA-Facilities-Upgrade-Vaccine-Manufacturing.pdf
+2025-09-08 11:52:51,429 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:52:52,531 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/Press-Release-GIZ-EU-FDA-Facilities-Upgrade-Vaccine-Manufacturing.pdf HTTP/1.1" 200 125983
+2025-09-08 11:52:56,218 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/Press-Release-GIZ-EU-FDA-Facilities-Upgrade-Vaccine-Manufacturing.pdf: 200, content-type: application/pdf
+2025-09-08 11:52:56,219 [INFO] Downloaded press release PDF: press_releases/FDA_COMMEMORATES_WORLD_FOOD_SAFETY_DAY_20220607.pdf
+2025-09-08 11:52:56,278 [INFO] Extracted 6520 characters from PDF
+2025-09-08 11:52:56,280 [INFO] Processing press release 15: UNREGISTERED MEDICINES FOR THE TREATMENT OF DIABET...
+2025-09-08 11:52:56,280 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/unregistered-medicines-for-the-treatment-of-diabetes.pdf
+2025-09-08 11:52:56,624 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/unregistered-medicines-for-the-treatment-of-diabetes.pdf HTTP/1.1" 200 371232
+2025-09-08 11:53:02,718 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/unregistered-medicines-for-the-treatment-of-diabetes.pdf: 200, content-type: application/pdf
+2025-09-08 11:53:02,719 [INFO] Downloaded press release PDF: press_releases/UNREGISTERED_MEDICINES_FOR_THE_TREATMENT_OF_DIABETES_20220228.pdf
+2025-09-08 11:53:02,721 [INFO] Attempting OCR extraction for press_releases/UNREGISTERED_MEDICINES_FOR_THE_TREATMENT_OF_DIABETES_20220228.pdf
+2025-09-08 11:53:02,726 [ERROR] OCR extraction failed for press_releases/UNREGISTERED_MEDICINES_FOR_THE_TREATMENT_OF_DIABETES_20220228.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-09-08 11:53:02,727 [INFO] Processing press release 16: GERMAN COOPERATION, EU JOIN HANDS TO UPGRADE FDA T...
+2025-09-08 11:53:02,728 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/Press-Release-GIZ-EU-FDA-Facilities-Upgrade-Vaccine-Manufacturing.pdf
+2025-09-08 11:53:02,729 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:53:03,818 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/Press-Release-GIZ-EU-FDA-Facilities-Upgrade-Vaccine-Manufacturing.pdf HTTP/1.1" 200 125983
+2025-09-08 11:53:05,578 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/Press-Release-GIZ-EU-FDA-Facilities-Upgrade-Vaccine-Manufacturing.pdf: 200, content-type: application/pdf
+2025-09-08 11:53:05,579 [INFO] Downloaded press release PDF: press_releases/GERMAN_COOPERATION_EU_JOIN_HANDS_TO_UPGRADE_FDA_TOWARDS_FIRS_20220218.pdf
+2025-09-08 11:53:05,636 [INFO] Extracted 6520 characters from PDF
+2025-09-08 11:53:05,638 [INFO] Processing press release 17: COAGULATED MILK PRODUCT FROM NESTLE GHANA LIMITED...
+2025-09-08 11:53:05,638 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/PRESS-RELEASE-COAGULATED-MILK-PRODUCTS.pdf
+2025-09-08 11:53:06,000 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/PRESS-RELEASE-COAGULATED-MILK-PRODUCTS.pdf HTTP/1.1" 200 669673
+2025-09-08 11:53:17,651 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/PRESS-RELEASE-COAGULATED-MILK-PRODUCTS.pdf: 200, content-type: application/pdf
+2025-09-08 11:53:17,654 [INFO] Downloaded press release PDF: press_releases/COAGULATED_MILK_PRODUCT_FROM_NESTLE_GHANA_LIMITED_20220110.pdf
+2025-09-08 11:53:17,654 [WARNING] Multiple definitions in dictionary at byte 0xa37b4 for key /Info
+2025-09-08 11:53:17,655 [WARNING] Multiple definitions in dictionary at byte 0xa37c1 for key /Info
+2025-09-08 11:53:17,655 [WARNING] Multiple definitions in dictionary at byte 0xa37ce for key /Info
+2025-09-08 11:53:17,656 [INFO] Attempting OCR extraction for press_releases/COAGULATED_MILK_PRODUCT_FROM_NESTLE_GHANA_LIMITED_20220110.pdf
+2025-09-08 11:53:17,664 [ERROR] OCR extraction failed for press_releases/COAGULATED_MILK_PRODUCT_FROM_NESTLE_GHANA_LIMITED_20220110.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-09-08 11:53:17,666 [INFO] Processing press release 18: FDA's EMERGENCY USE AUTHORISATION OF MEDICAL PRODU...
+2025-09-08 11:53:17,667 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/FDA_EMERGENCY-USE-AUTHORIZATION.pdf
+2025-09-08 11:53:17,669 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:53:18,714 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/FDA_EMERGENCY-USE-AUTHORIZATION.pdf HTTP/1.1" 200 161596
+2025-09-08 11:53:21,647 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/FDA_EMERGENCY-USE-AUTHORIZATION.pdf: 200, content-type: application/pdf
+2025-09-08 11:53:21,649 [INFO] Downloaded press release PDF: press_releases/FDAs_EMERGENCY_USE_AUTHORISATION_OF_MEDICAL_PRODUCTS_20211227.pdf
+2025-09-08 11:53:21,680 [INFO] Extracted 7741 characters from PDF
+2025-09-08 11:53:21,683 [INFO] Processing press release 19: FDA TO RELEASE AN ALL-STAR DRUG ABUSE CAMPAIGN MUS...
+2025-09-08 11:53:21,683 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/PR-ABUSE-MUSIC-VIDEO.pdf
+2025-09-08 11:53:22,018 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/PR-ABUSE-MUSIC-VIDEO.pdf HTTP/1.1" 200 307562
+2025-09-08 11:53:27,371 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/PR-ABUSE-MUSIC-VIDEO.pdf: 200, content-type: application/pdf
+2025-09-08 11:53:27,373 [INFO] Downloaded press release PDF: press_releases/FDA_TO_RELEASE_AN_ALL-STAR_DRUG_ABUSE_CAMPAIGN_MUSIC_VIDEO_20211220.pdf
+2025-09-08 11:53:27,374 [INFO] Attempting OCR extraction for press_releases/FDA_TO_RELEASE_AN_ALL-STAR_DRUG_ABUSE_CAMPAIGN_MUSIC_VIDEO_20211220.pdf
+2025-09-08 11:53:27,383 [ERROR] OCR extraction failed for press_releases/FDA_TO_RELEASE_AN_ALL-STAR_DRUG_ABUSE_CAMPAIGN_MUSIC_VIDEO_20211220.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-09-08 11:53:27,386 [INFO] Processing press release 20: SEIZURE OF UNREGISTERED MEDICINAL PRODUCTS AT THE ...
+2025-09-08 11:53:27,386 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/Press-Release-3.pdf
+2025-09-08 11:53:27,388 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:53:28,461 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/Press-Release-3.pdf HTTP/1.1" 200 537965
+2025-09-08 11:53:33,587 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/Press-Release-3.pdf: 200, content-type: application/pdf
+2025-09-08 11:53:33,589 [INFO] Downloaded press release PDF: press_releases/SEIZURE_OF_UNREGISTERED_MEDICINAL_PRODUCTS_AT_THE_MADINA_MAR_20211124.pdf
+2025-09-08 11:53:33,591 [INFO] Attempting OCR extraction for press_releases/SEIZURE_OF_UNREGISTERED_MEDICINAL_PRODUCTS_AT_THE_MADINA_MAR_20211124.pdf
+2025-09-08 11:53:33,598 [ERROR] OCR extraction failed for press_releases/SEIZURE_OF_UNREGISTERED_MEDICINAL_PRODUCTS_AT_THE_MADINA_MAR_20211124.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-09-08 11:53:33,601 [INFO] Processing press release 21: MAKING VACCINES BETTER FOR EVERYONE: REPORT SUSPEC...
+2025-09-08 11:53:33,601 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/MEDSAFETY-WEEK-PRESS-RELEASE.pdf
+2025-09-08 11:53:33,603 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:53:34,654 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/MEDSAFETY-WEEK-PRESS-RELEASE.pdf HTTP/1.1" 200 628609
+2025-09-08 11:53:40,026 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/MEDSAFETY-WEEK-PRESS-RELEASE.pdf: 200, content-type: application/pdf
+2025-09-08 11:53:40,029 [INFO] Downloaded press release PDF: press_releases/MAKING_VACCINES_BETTER_FOR_EVERYONE_REPORT_SUSPECTED_SIDE_EF_20211102.pdf
+2025-09-08 11:53:40,031 [INFO] Attempting OCR extraction for press_releases/MAKING_VACCINES_BETTER_FOR_EVERYONE_REPORT_SUSPECTED_SIDE_EF_20211102.pdf
+2025-09-08 11:53:40,038 [ERROR] OCR extraction failed for press_releases/MAKING_VACCINES_BETTER_FOR_EVERYONE_REPORT_SUSPECTED_SIDE_EF_20211102.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-09-08 11:53:40,040 [INFO] Processing press release 22: FDA WARNS OPERATORS OF BODY ENHANCEMENT PRODUCTS...
+2025-09-08 11:53:40,040 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/PRESS-RELEASE-ON-BODY-ENHANCEMENT-PRODUCTS.pdf
+2025-09-08 11:53:40,042 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:53:41,135 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/PRESS-RELEASE-ON-BODY-ENHANCEMENT-PRODUCTS.pdf HTTP/1.1" 200 277430
+2025-09-08 11:53:43,541 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/PRESS-RELEASE-ON-BODY-ENHANCEMENT-PRODUCTS.pdf: 200, content-type: application/pdf
+2025-09-08 11:53:43,542 [INFO] Downloaded press release PDF: press_releases/FDA_WARNS_OPERATORS_OF_BODY_ENHANCEMENT_PRODUCTS_20210902.pdf
+2025-09-08 11:53:43,543 [INFO] Attempting OCR extraction for press_releases/FDA_WARNS_OPERATORS_OF_BODY_ENHANCEMENT_PRODUCTS_20210902.pdf
+2025-09-08 11:53:43,552 [ERROR] OCR extraction failed for press_releases/FDA_WARNS_OPERATORS_OF_BODY_ENHANCEMENT_PRODUCTS_20210902.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-09-08 11:53:43,554 [INFO] Processing press release 23: FDA APPROVES TWO MORE COVID-19 VACCINES FOR USE IN...
+2025-09-08 11:53:43,554 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/scan-1.pdf
+2025-09-08 11:53:43,925 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/scan-1.pdf HTTP/1.1" 200 269076
+2025-09-08 11:53:46,058 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/scan-1.pdf: 200, content-type: application/pdf
+2025-09-08 11:53:46,059 [INFO] Downloaded press release PDF: press_releases/FDA_APPROVES_TWO_MORE_COVID-19_VACCINES_FOR_USE_IN_GHANA_20210729.pdf
+2025-09-08 11:53:46,061 [INFO] Attempting OCR extraction for press_releases/FDA_APPROVES_TWO_MORE_COVID-19_VACCINES_FOR_USE_IN_GHANA_20210729.pdf
+2025-09-08 11:53:46,071 [ERROR] OCR extraction failed for press_releases/FDA_APPROVES_TWO_MORE_COVID-19_VACCINES_FOR_USE_IN_GHANA_20210729.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-09-08 11:53:46,074 [INFO] Processing press release 24: COVID-19 VACCINES ARE OF GOOD QUALITY, SAFE AND EF...
+2025-09-08 11:53:46,074 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/scan-page-1-merged.pdf
+2025-09-08 11:53:46,441 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/scan-page-1-merged.pdf HTTP/1.1" 200 464347
+2025-09-08 11:53:50,009 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/scan-page-1-merged.pdf: 200, content-type: application/pdf
+2025-09-08 11:53:50,010 [INFO] Downloaded press release PDF: press_releases/COVID-19_VACCINES_ARE_OF_GOOD_QUALITY_SAFE_AND_EFFICACIOUS_20210615.pdf
+2025-09-08 11:53:50,013 [INFO] Attempting OCR extraction for press_releases/COVID-19_VACCINES_ARE_OF_GOOD_QUALITY_SAFE_AND_EFFICACIOUS_20210615.pdf
+2025-09-08 11:53:50,020 [ERROR] OCR extraction failed for press_releases/COVID-19_VACCINES_ARE_OF_GOOD_QUALITY_SAFE_AND_EFFICACIOUS_20210615.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-09-08 11:53:50,023 [INFO] Processing press release 25: 2021 WORLD NO TOBACCO DAY - GHANA COMMITS TO HELP ...
+2025-09-08 11:53:50,023 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/TapScanner-05-28-2021-20-391.pdf
+2025-09-08 11:53:50,398 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/TapScanner-05-28-2021-20-391.pdf HTTP/1.1" 200 358921
+2025-09-08 11:53:55,057 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/TapScanner-05-28-2021-20-391.pdf: 200, content-type: application/pdf
+2025-09-08 11:53:55,059 [INFO] Downloaded press release PDF: press_releases/2021_WORLD_NO_TOBACCO_DAY_-_GHANA_COMMITS_TO_HELP_TOBACCO_US_20210531.pdf
+2025-09-08 11:53:55,060 [INFO] Attempting OCR extraction for press_releases/2021_WORLD_NO_TOBACCO_DAY_-_GHANA_COMMITS_TO_HELP_TOBACCO_US_20210531.pdf
+2025-09-08 11:53:55,067 [ERROR] OCR extraction failed for press_releases/2021_WORLD_NO_TOBACCO_DAY_-_GHANA_COMMITS_TO_HELP_TOBACCO_US_20210531.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-09-08 11:53:55,068 [INFO] Extracted 21 characters from PDF
+2025-09-08 11:53:55,070 [INFO] Processing press release 26: DISCLAIMER : FOOD AND DRUGS AUTHORITY RECRUITMENT...
+2025-09-08 11:53:55,070 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/Disclaimer-food-and-drugs-authority-recruitment-1.pdf
+2025-09-08 11:53:55,385 [ERROR] Failed to download press release for 'DISCLAIMER : FOOD AND DRUGS AUTHORITY RECRUITMENT' at https://fdaghana.gov.gh/wp-content/uploads/2024/09/Disclaimer-food-and-drugs-authority-recruitment-1.pdf: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+2025-09-08 11:53:55,389 [INFO] Processing press release 27: ACHOURA VERT TEA - DECLARED AS WHOLESOME...
+2025-09-08 11:53:55,389 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/Achoura-Vert-Tea.pdf
+2025-09-08 11:53:55,391 [DEBUG] Starting new HTTPS connection (6): fdaghana.gov.gh:443
+2025-09-08 11:53:56,451 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/Achoura-Vert-Tea.pdf HTTP/1.1" 200 238206
+2025-09-08 11:53:58,541 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/Achoura-Vert-Tea.pdf: 200, content-type: application/pdf
+2025-09-08 11:53:58,542 [INFO] Downloaded press release PDF: press_releases/ACHOURA_VERT_TEA_-_DECLARED_AS_WHOLESOME_20210404.pdf
+2025-09-08 11:53:58,544 [INFO] Attempting OCR extraction for press_releases/ACHOURA_VERT_TEA_-_DECLARED_AS_WHOLESOME_20210404.pdf
+2025-09-08 11:53:58,552 [ERROR] OCR extraction failed for press_releases/ACHOURA_VERT_TEA_-_DECLARED_AS_WHOLESOME_20210404.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-09-08 11:53:58,555 [INFO] Processing press release 28: LABORATORY INVESTIGATION - LIVING BITTERS...
+2025-09-08 11:53:58,555 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/Laboratory-Investigation-Living-Bitters-Capsules-1.pdf
+2025-09-08 11:53:58,913 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/Laboratory-Investigation-Living-Bitters-Capsules-1.pdf HTTP/1.1" 200 318310
+2025-09-08 11:54:02,024 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/Laboratory-Investigation-Living-Bitters-Capsules-1.pdf: 200, content-type: application/pdf
+2025-09-08 11:54:02,026 [INFO] Downloaded press release PDF: press_releases/LABORATORY_INVESTIGATION_-_LIVING_BITTERS_20210323.pdf
+2025-09-08 11:54:02,027 [INFO] Attempting OCR extraction for press_releases/LABORATORY_INVESTIGATION_-_LIVING_BITTERS_20210323.pdf
+2025-09-08 11:54:02,035 [ERROR] OCR extraction failed for press_releases/LABORATORY_INVESTIGATION_-_LIVING_BITTERS_20210323.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-09-08 11:54:02,037 [INFO] Processing press release 29: FDA APPROVES FIRST HERBAL MEDICINE FOR CLINICAL TR...
+2025-09-08 11:54:02,037 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/fda-approves-new-1.pdf
+2025-09-08 11:54:02,397 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/fda-approves-new-1.pdf HTTP/1.1" 200 298300
+2025-09-08 11:54:06,176 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/fda-approves-new-1.pdf: 200, content-type: application/pdf
+2025-09-08 11:54:06,178 [INFO] Downloaded press release PDF: press_releases/FDA_APPROVES_FIRST_HERBAL_MEDICINE_FOR_CLINICAL_TRIAL_ON_COV_20210201.pdf
+2025-09-08 11:54:06,214 [INFO] Extracted 3101 characters from PDF
+2025-09-08 11:54:06,216 [INFO] Processing press release 30: FDA DECLARES ZERO TOLERANCE FOR THE IMPORTATION OF...
+2025-09-08 11:54:06,216 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/PRESS-RELEASE-FDA-DECLARES-ZERO-TOLERANCE-FOR-THE-IMPORTATIONOF-UNREGISTEREDPRODUCTS.pdf
+2025-09-08 11:54:06,687 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/PRESS-RELEASE-FDA-DECLARES-ZERO-TOLERANCE-FOR-THE-IMPORTATIONOF-UNREGISTEREDPRODUCTS.pdf HTTP/1.1" 200 304227
+2025-09-08 11:54:11,595 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/PRESS-RELEASE-FDA-DECLARES-ZERO-TOLERANCE-FOR-THE-IMPORTATIONOF-UNREGISTEREDPRODUCTS.pdf: 200, content-type: application/pdf
+2025-09-08 11:54:11,596 [INFO] Downloaded press release PDF: press_releases/FDA_DECLARES_ZERO_TOLERANCE_FOR_THE_IMPORTATION_OF_UNREGISTE_20210115.pdf
+2025-09-08 11:54:11,598 [INFO] Attempting OCR extraction for press_releases/FDA_DECLARES_ZERO_TOLERANCE_FOR_THE_IMPORTATION_OF_UNREGISTE_20210115.pdf
+2025-09-08 11:54:11,606 [ERROR] OCR extraction failed for press_releases/FDA_DECLARES_ZERO_TOLERANCE_FOR_THE_IMPORTATION_OF_UNREGISTE_20210115.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-09-08 11:54:11,609 [INFO] Processing press release 31: PRESS RELEASE - A CALL TO HEALTHCARE PROFESSIONALS...
+2025-09-08 11:54:11,609 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/Press-Release.pdf
+2025-09-08 11:54:11,611 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:54:12,635 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/Press-Release.pdf HTTP/1.1" 200 851811
+2025-09-08 11:54:26,906 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/Press-Release.pdf: 200, content-type: application/pdf
+2025-09-08 11:54:26,909 [INFO] Downloaded press release PDF: press_releases/PRESS_RELEASE_-_A_CALL_TO_HEALTHCARE_PROFESSIONALS_AND_THE_P_20201102.pdf
+2025-09-08 11:54:26,936 [INFO] Extracted 3373 characters from PDF
+2025-09-08 11:54:26,938 [INFO] Processing press release 32: PRESS RELEASE - VIRAL DOCUMENTARY ABOUT THE PRODUC...
+2025-09-08 11:54:26,938 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/Press-Release-Tomato-Paste.pdf
+2025-09-08 11:54:26,939 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:54:27,989 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/Press-Release-Tomato-Paste.pdf HTTP/1.1" 200 682272
+2025-09-08 11:54:39,726 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/Press-Release-Tomato-Paste.pdf: 200, content-type: application/pdf
+2025-09-08 11:54:39,728 [INFO] Downloaded press release PDF: press_releases/PRESS_RELEASE_-_VIRAL_DOCUMENTARY_ABOUT_THE_PRODUCTION_OF_TO_20200925.pdf
+2025-09-08 11:54:39,751 [INFO] Extracted 2907 characters from PDF
+2025-09-08 11:54:39,754 [INFO] Processing press release 33: COVID TEST AT KIA RELIABLE; FDA DISMISSES DR. BONN...
+2025-09-08 11:54:39,754 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/KIA-COVID-TEST.pdf
+2025-09-08 11:54:39,755 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:54:40,774 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/KIA-COVID-TEST.pdf HTTP/1.1" 200 321464
+2025-09-08 11:54:46,512 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/KIA-COVID-TEST.pdf: 200, content-type: application/pdf
+2025-09-08 11:54:46,514 [INFO] Downloaded press release PDF: press_releases/COVID_TEST_AT_KIA_RELIABLE_FDA_DISMISSES_DR_BONNEY_20200901.pdf
+2025-09-08 11:54:46,515 [INFO] Attempting OCR extraction for press_releases/COVID_TEST_AT_KIA_RELIABLE_FDA_DISMISSES_DR_BONNEY_20200901.pdf
+2025-09-08 11:54:46,524 [ERROR] OCR extraction failed for press_releases/COVID_TEST_AT_KIA_RELIABLE_FDA_DISMISSES_DR_BONNEY_20200901.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-09-08 11:54:46,526 [INFO] Processing press release 34: FDA ADVISES ON THE USE OF UNREGISTERED RAPID DIAGN...
+2025-09-08 11:54:46,527 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/Press-Release-1.pdf
+2025-09-08 11:54:46,529 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:54:47,592 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/Press-Release-1.pdf HTTP/1.1" 200 607901
+2025-09-08 11:54:56,264 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/Press-Release-1.pdf: 200, content-type: application/pdf
+2025-09-08 11:54:56,267 [INFO] Downloaded press release PDF: press_releases/FDA_ADVISES_ON_THE_USE_OF_UNREGISTERED_RAPID_DIAGNOSTIC_TEST_20200704.pdf
+2025-09-08 11:54:56,267 [WARNING] Multiple definitions in dictionary at byte 0x9466a for key /Info
+2025-09-08 11:54:56,267 [WARNING] Multiple definitions in dictionary at byte 0x94676 for key /Info
+2025-09-08 11:54:56,267 [WARNING] Multiple definitions in dictionary at byte 0x94682 for key /Info
+2025-09-08 11:54:56,268 [INFO] Attempting OCR extraction for press_releases/FDA_ADVISES_ON_THE_USE_OF_UNREGISTERED_RAPID_DIAGNOSTIC_TEST_20200704.pdf
+2025-09-08 11:54:56,277 [ERROR] OCR extraction failed for press_releases/FDA_ADVISES_ON_THE_USE_OF_UNREGISTERED_RAPID_DIAGNOSTIC_TEST_20200704.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-09-08 11:54:56,279 [INFO] Processing press release 35: PRESS RELEASE: FDA DETAINS UNREGISTERED COVID-19 H...
+2025-09-08 11:54:56,279 [INFO] Attempting to download press release PDF: https://fdaghana.gov.gh/wp-content/uploads/2024/09/PRESS-RELEASE-ON-COVID-19-HERBAL.pdf
+2025-09-08 11:54:56,281 [DEBUG] Resetting dropped connection: fdaghana.gov.gh
+2025-09-08 11:54:57,300 [DEBUG] https://fdaghana.gov.gh:443 "GET /wp-content/uploads/2024/09/PRESS-RELEASE-ON-COVID-19-HERBAL.pdf HTTP/1.1" 200 315814
+2025-09-08 11:55:01,712 [INFO] HTTP status for https://fdaghana.gov.gh/wp-content/uploads/2024/09/PRESS-RELEASE-ON-COVID-19-HERBAL.pdf: 200, content-type: application/pdf
+2025-09-08 11:55:01,715 [INFO] Downloaded press release PDF: press_releases/PRESS_RELEASE_FDA_DETAINS_UNREGISTERED_COVID-19_HERBAL_PRODU_20200630.pdf
+2025-09-08 11:55:01,717 [INFO] Attempting OCR extraction for press_releases/PRESS_RELEASE_FDA_DETAINS_UNREGISTERED_COVID-19_HERBAL_PRODU_20200630.pdf
+2025-09-08 11:55:01,725 [ERROR] OCR extraction failed for press_releases/PRESS_RELEASE_FDA_DETAINS_UNREGISTERED_COVID-19_HERBAL_PRODU_20200630.pdf: Unable to get page count. Is poppler installed and in PATH?
+2025-09-08 11:55:01,728 [INFO] FDA Ghana scraping complete for all enabled sections.

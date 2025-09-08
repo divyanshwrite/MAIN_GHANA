@@ -40,6 +40,9 @@ def create_or_update_table():
             alert_title TEXT,
             alert_pdf_filename TEXT,
             all_text TEXT,
+            press_release_title TEXT,
+            press_release_date DATE,
+            pdf_press_release_link_public_link TEXT,
             created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
         );
         """
@@ -47,7 +50,7 @@ def create_or_update_table():
         cur.execute(create_table_sql)
         print("✅ Table 'fda_recalls' created or already exists")
         
-        # Add all_text column if it doesn't exist
+        # Add columns if they don't exist
         try:
             cur.execute("""
                 ALTER TABLE fda_recalls 
@@ -57,11 +60,40 @@ def create_or_update_table():
         except Exception as e:
             print(f"Note: {e}")
         
+        # Add new press release specific columns
+        try:
+            cur.execute("""
+                ALTER TABLE fda_recalls 
+                ADD COLUMN IF NOT EXISTS press_release_title TEXT;
+            """)
+            print("✅ Column 'press_release_title' added or already exists")
+        except Exception as e:
+            print(f"Note: {e}")
+        
+        try:
+            cur.execute("""
+                ALTER TABLE fda_recalls 
+                ADD COLUMN IF NOT EXISTS press_release_date DATE;
+            """)
+            print("✅ Column 'press_release_date' added or already exists")
+        except Exception as e:
+            print(f"Note: {e}")
+        
+        try:
+            cur.execute("""
+                ALTER TABLE fda_recalls 
+                ADD COLUMN IF NOT EXISTS pdf_press_release_link_public_link TEXT;
+            """)
+            print("✅ Column 'pdf_press_release_link_public_link' added or already exists")
+        except Exception as e:
+            print(f"Note: {e}")
+        
         # Create indexes for better performance
         indexes = [
             "CREATE INDEX IF NOT EXISTS idx_fda_recalls_entry_type ON fda_recalls(entry_type);",
             "CREATE INDEX IF NOT EXISTS idx_fda_recalls_date_issued ON fda_recalls(date_issued);",
             "CREATE INDEX IF NOT EXISTS idx_fda_recalls_date_recall_issued ON fda_recalls(date_recall_issued);",
+            "CREATE INDEX IF NOT EXISTS idx_fda_recalls_press_release_date ON fda_recalls(press_release_date);",
             "CREATE INDEX IF NOT EXISTS idx_fda_recalls_created_at ON fda_recalls(created_at);"
         ]
         

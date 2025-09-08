@@ -15,6 +15,9 @@ import psycopg2
 import psycopg2.extras
 from datetime import datetime
 import PyPDF2
+import pytesseract
+from PIL import Image
+from pdf2image import convert_from_path
 
 # Logging configuration
 def setup_logging(verbose: bool = False, output_dir: Path = Path("./recalls")):
@@ -46,14 +49,46 @@ def to_latin1(text: str) -> str:
         return text.encode("ascii", errors="replace").decode("ascii")
 
 def extract_pdf_text(pdf_path: Path) -> str:
-    """Extract text content from PDF file"""
+    """Extract text content from PDF file using both PyPDF2 and OCR"""
     try:
-        with open(pdf_path, 'rb') as file:
-            reader = PyPDF2.PdfReader(file)
-            text = ""
-            for page in reader.pages:
-                text += page.extract_text() + "\n"
-            return text.strip()
+        text = ""
+        
+        # First try PyPDF2 for text-based PDFs
+        try:
+            with open(pdf_path, 'rb') as file:
+                reader = PyPDF2.PdfReader(file)
+                for page in reader.pages:
+                    page_text = page.extract_text()
+                    if page_text:
+                        text += page_text + "\n"
+        except Exception as e:
+            logging.warning(f"PyPDF2 extraction failed for {pdf_path}: {e}")
+        
+        # If no text extracted or very little text, try OCR
+        if len(text.strip()) < 100:  # If very little text extracted
+            logging.info(f"Attempting OCR extraction for {pdf_path}")
+            try:
+                # Convert PDF pages to images
+                images = convert_from_path(pdf_path, dpi=200)
+                ocr_text = ""
+                
+                for i, image in enumerate(images[:10]):  # Limit to first 10 pages
+                    try:
+                        # Extract text using OCR
+                        page_text = pytesseract.image_to_string(image, lang='eng')
+                        if page_text.strip():
+                            ocr_text += f"Page {i+1}:\n{page_text}\n\n"
+                    except Exception as e:
+                        logging.warning(f"OCR failed for page {i+1} of {pdf_path}: {e}")
+                
+                if len(ocr_text.strip()) > len(text.strip()):
+                    text = ocr_text
+                    logging.info(f"OCR extracted {len(ocr_text)} characters from {pdf_path}")
+                
+            except Exception as e:
+                logging.error(f"OCR extraction failed for {pdf_path}: {e}")
+        
+        return text.strip()
     except Exception as e:
         logging.error(f"Failed to extract text from PDF {pdf_path}: {e}")
         return ""
@@ -76,6 +111,7 @@ def save_pdf(output_path: Path, title: str, fields: Dict[str, str]):
 class FDARecallScraper:
     BASE_URL = "https://fdaghana.gov.gh/newsroom/product-recalls-and-alerts/"
     ALERTS_URL = "https://fdaghana.gov.gh/newsroom/product-alerts/"
+    PRESS_RELEASES_URL = "https://fdaghana.gov.gh/newsroom/press-release/"
 
     def __init__(self, output_dir: Path, headless: bool = True, verbose: bool = False):
         self.output_dir = output_dir
@@ -102,7 +138,7 @@ class FDARecallScraper:
             self.db_conn = None
 
 
-    def _insert_db(self, fields: dict, pdf_path: str, source_url: str = None, entry_type: str = 'recall', alert_title: str = None, alert_pdf_filename: str = None, all_text: str = None):
+    def _insert_db(self, fields: dict, pdf_path: str, source_url: str = None, entry_type: str = 'recall', alert_title: str = None, alert_pdf_filename: str = None, all_text: str = None, press_release_title: str = None, press_release_date: str = None, pdf_public_link: str = None):
         if not self.db_conn:
             return
         def parse_date(val):
@@ -133,6 +169,20 @@ class FDARecallScraper:
                         parse_date(fields.get("Date Issued") or fields.get("Date Alert was Issued")),
                         alert_title,
                         alert_pdf_filename,
+                        pdf_path,
+                        all_text
+                    ])
+                elif entry_type == 'press_release':
+                    cur.execute("""
+                        INSERT INTO fda_recalls (
+                            entry_type, press_release_title, press_release_date, pdf_press_release_link_public_link, pdf_path, all_text, created_at
+                        ) VALUES (%s, %s, %s, %s, %s, %s, NOW())
+                    """,
+                    [
+                        'press_release',
+                        press_release_title,
+                        parse_date(press_release_date or fields.get("Date Issued") or fields.get("Date")),
+                        pdf_public_link,
                         pdf_path,
                         all_text
                     ])
@@ -372,6 +422,291 @@ class FDARecallScraper:
         pdf.multi_cell(0, 8, f"Date Issued: {date_issued}")
         pdf.output(str(pdf_path))
 
+    def scrape_press_releases(self):
+        logging.info("Starting FDA Ghana Press Releases Scraper...")
+        
+        # Use Playwright to render the JavaScript table properly
+        with sync_playwright() as p:
+            browser = p.chromium.launch(headless=self.headless)
+            page = browser.new_page()
+            try:
+                page.goto(self.PRESS_RELEASES_URL, timeout=60000)
+                page.wait_for_load_state("networkidle")
+                
+                # Wait for DataTable to load
+                try:
+                    page.wait_for_selector("table", timeout=10000)
+                    logging.info("Press releases table found and loaded")
+                except Exception:
+                    logging.warning("Press releases table not found immediately")
+                
+                # Try to set "Show all entries" if available
+                try:
+                    # Look for DataTable length select
+                    select = page.query_selector('select[name*="length"], select[name*="DataTables_Table"]')
+                    if select:
+                        options = select.query_selector_all("option")
+                        for option in options:
+                            text = option.inner_text().strip()
+                            if text == "All" or text == "-1":
+                                select.select_option(value=option.get_attribute("value"))
+                                page.wait_for_timeout(2000)  # Wait for table to update
+                                break
+                        else:
+                            # If no "All" option, try to select the largest number
+                            max_val = 10
+                            max_option = None
+                            for option in options:
+                                text = option.inner_text().strip()
+                                if text.isdigit() and int(text) > max_val:
+                                    max_val = int(text)
+                                    max_option = option
+                            if max_option:
+                                select.select_option(value=max_option.get_attribute("value"))
+                                page.wait_for_timeout(2000)
+                except Exception as e:
+                    logging.warning(f"Could not set show all entries for press releases: {e}")
+                
+                html = page.content()
+            except Exception as e:
+                logging.error(f"Error loading press releases page with Playwright: {e}")
+                return
+            finally:
+                browser.close()
+        
+        soup = BeautifulSoup(html, "html.parser")
+        
+        # Look for the main table - try different approaches
+        table = None
+        # First try to find DataTable
+        table = soup.find("table", {"id": lambda x: x and "DataTables_Table" in x})
+        if not table:
+            # Try to find any table with date and title columns
+            tables = soup.find_all("table")
+            for t in tables:
+                headers = [th.get_text(strip=True).lower() for th in t.find_all("th")]
+                if any("date" in h for h in headers) and any("title" in h or "press" in h for h in headers):
+                    table = t
+                    break
+        if not table:
+            # Fallback to first table
+            tables = soup.find_all("table")
+            if tables:
+                table = tables[0]
+            
+        if not table:
+            logging.error("Could not find press releases table on the page.")
+            return
+            
+        tbody = table.find("tbody")
+        if tbody:
+            rows = tbody.find_all("tr")
+        else:
+            rows = table.find_all("tr")[1:]  # skip header if no tbody
+            
+        logging.info(f"Found {len(rows)} press release entries.")
+        
+        # Debug: Print first few rows to see what we're getting
+        for i, row in enumerate(rows[:3]):
+            cols = row.find_all(["td", "th"])
+            logging.debug(f"Press Release Row {i+1}: {[col.get_text(strip=True) for col in cols]}")
+        
+        press_releases_dir = self.output_dir.parent / "press_releases"
+        press_releases_dir.mkdir(parents=True, exist_ok=True)
+        
+        for i, row in enumerate(tqdm(rows, desc="Processing press releases"), 1):
+            cols = row.find_all(["td", "th"])
+            if len(cols) < 2:
+                continue
+                
+            date_issued = cols[0].get_text(strip=True)
+            press_release_cell = cols[1]
+            press_release_title = press_release_cell.get_text(strip=True)
+            
+            # Skip empty or invalid rows
+            if not date_issued or not press_release_title or len(press_release_title) < 5:
+                continue
+            
+            # Check for links in the title cell
+            link = press_release_cell.find("a")
+            
+            logging.info(f"Processing press release {i}: {press_release_title[:50]}...")
+            
+            cleaned_title = clean_filename(press_release_title)[:60]
+            date_str = "".join(date_issued.split("/"))  # fallback if needed
+            try:
+                dt = datetime.strptime(date_issued, "%d/%m/%Y")
+                date_str = dt.strftime("%Y%m%d")
+            except Exception:
+                # Try other date formats
+                for fmt in ("%Y-%m-%d", "%m/%d/%Y", "%d-%m-%Y"):
+                    try:
+                        dt = datetime.strptime(date_issued, fmt)
+                        date_str = dt.strftime("%Y%m%d")
+                        break
+                    except Exception:
+                        continue
+                else:
+                    date_str = re.sub(r"[^0-9]", "", date_issued)[:8]
+            
+            pdf_filename = f"{cleaned_title}_{date_str}.pdf"
+            pdf_path = press_releases_dir / pdf_filename
+            pdf_saved = False
+            extracted_text = ""
+            pdf_public_url = None
+            
+            if link and link.has_attr("href"):
+                pdf_url = link["href"]
+                if not pdf_url.startswith("http"):
+                    pdf_url = requests.compat.urljoin(self.PRESS_RELEASES_URL, pdf_url)
+                
+                # Store the public URL for database
+                pdf_public_url = pdf_url
+                
+                logging.info(f"Attempting to download press release PDF: {pdf_url}")
+                try:
+                    r = self.session.get(pdf_url, timeout=30)
+                    logging.info(f"HTTP status for {pdf_url}: {r.status_code}, content-type: {r.headers.get('content-type')}")
+                    if r.status_code == 200:
+                        content_type = r.headers.get("content-type", "").lower()
+                        if content_type.startswith("application/pdf"):
+                            with open(pdf_path, "wb") as f:
+                                f.write(r.content)
+                            pdf_saved = True
+                            logging.info(f"Downloaded press release PDF: {pdf_path}")
+                            
+                            # Extract text from the downloaded PDF
+                            extracted_text = extract_pdf_text(pdf_path)
+                            if extracted_text:
+                                logging.info(f"Extracted {len(extracted_text)} characters from PDF")
+                            
+                        elif "text/html" in content_type:
+                            # It's an HTML page, try to extract more info or find PDF links
+                            detail_soup = BeautifulSoup(r.text, "html.parser")
+                            # Look for PDF links in the detail page
+                            pdf_links = detail_soup.find_all("a", href=lambda x: x and x.endswith('.pdf'))
+                            if pdf_links:
+                                for pdf_link in pdf_links:
+                                    direct_pdf_url = pdf_link["href"]
+                                    if not direct_pdf_url.startswith("http"):
+                                        direct_pdf_url = requests.compat.urljoin(pdf_url, direct_pdf_url)
+                                    try:
+                                        pdf_resp = self.session.get(direct_pdf_url, timeout=30)
+                                        if pdf_resp.status_code == 200 and pdf_resp.headers.get("content-type", "").lower().startswith("application/pdf"):
+                                            with open(pdf_path, "wb") as f:
+                                                f.write(pdf_resp.content)
+                                            pdf_saved = True
+                                            logging.info(f"Downloaded press release PDF from detail page: {pdf_path}")
+                                            
+                                            # Extract text from the downloaded PDF
+                                            extracted_text = extract_pdf_text(pdf_path)
+                                            if extracted_text:
+                                                logging.info(f"Extracted {len(extracted_text)} characters from PDF")
+                                            break
+                                    except Exception as e:
+                                        logging.warning(f"Failed to download PDF from detail page: {e}")
+                            
+                            if not pdf_saved:
+                                # Create PDF with HTML content
+                                self._create_press_release_pdf_from_html(pdf_path, press_release_title, date_issued, detail_soup)
+                                pdf_saved = True
+                                extracted_text = f"Press Release Title: {press_release_title}\nDate: {date_issued}\nContent extracted from HTML page"
+                        else:
+                            logging.warning(f"Press release link is not a PDF: {pdf_url} (content-type: {content_type})")
+                    else:
+                        logging.warning(f"Press release PDF not found: {pdf_url} (status {r.status_code})")
+                        # Create 404 fallback PDF
+                        fallback_filename = f"Page_Not_Found_{cleaned_title}_{date_str}.pdf"
+                        fallback_path = press_releases_dir / fallback_filename
+                        self._create_not_found_pdf(fallback_path, press_release_title, date_issued)
+                        pdf_path = fallback_path
+                        pdf_saved = True
+                        extracted_text = "Page not found for this press release"
+                        
+                except Exception as e:
+                    logging.error(f"Failed to download press release for '{press_release_title}' at {pdf_url}: {e}")
+                    # Create fallback PDF for failed download
+                    fallback_filename = f"Page_Not_Found_{cleaned_title}_{date_str}.pdf"
+                    fallback_path = press_releases_dir / fallback_filename
+                    self._create_not_found_pdf(fallback_path, press_release_title, date_issued)
+                    pdf_path = fallback_path
+                    pdf_saved = True
+                    extracted_text = "Page not found for this press release"
+            
+            if not pdf_saved:
+                # Fallback PDF with press release info
+                self._create_fallback_press_release_pdf(pdf_path, press_release_title, date_issued)
+                logging.info(f"Saved fallback press release PDF: {pdf_path}")
+                extracted_text = f"Press Release Title: {press_release_title}\nDate: {date_issued}"
+            
+            # Insert into DB with extracted text and new columns
+            self._insert_db(
+                fields={"Date": date_issued},
+                pdf_path=str(pdf_path),
+                entry_type='press_release',
+                press_release_title=press_release_title,
+                press_release_date=date_issued,
+                pdf_public_link=pdf_public_url,
+                all_text=extracted_text
+            )
+
+    def _create_press_release_pdf_from_html(self, pdf_path, title, date_issued, soup):
+        """Create PDF from HTML content of press release detail page"""
+        pdf = FPDF()
+        pdf.add_page()
+        pdf.set_font("Arial", size=12)
+        pdf.cell(200, 10, txt=to_latin1(f"FDA Ghana Press Release - {date_issued}"), ln=True, align="C")
+        pdf.ln(5)
+        pdf.set_font("Arial", "B", 14)
+        pdf.multi_cell(0, 10, to_latin1(title))
+        pdf.ln(5)
+        
+        # Extract main content
+        content_div = soup.find("div", class_="entry-content") or soup.find("div", class_="content") or soup.find("main")
+        if content_div:
+            text_content = content_div.get_text(separator="\n", strip=True)
+            pdf.set_font("Arial", size=10)
+            # Clean and limit content
+            lines = text_content.split("\n")[:50]  # Limit lines
+            for line in lines:
+                if line.strip():
+                    pdf.multi_cell(0, 5, to_latin1(line.strip()[:100]))
+        
+        pdf.output(str(pdf_path))
+        
+    def _create_not_found_pdf(self, pdf_path, title, date_issued):
+        """Create PDF for press release with 404/not found error"""
+        pdf = FPDF()
+        pdf.add_page()
+        pdf.set_font("Arial", size=12)
+        pdf.cell(200, 10, txt=to_latin1(f"FDA Ghana Press Release - {date_issued}"), ln=True, align="C")
+        pdf.ln(10)
+        pdf.set_font("Arial", "B", 14)
+        pdf.multi_cell(0, 10, to_latin1(title))
+        pdf.ln(10)
+        pdf.set_font("Arial", size=12)
+        pdf.multi_cell(0, 8, "Page not found for this press release")
+        pdf.ln(5)
+        pdf.set_font("Arial", size=10)
+        pdf.multi_cell(0, 8, f"Date: {date_issued}")
+        pdf.multi_cell(0, 8, "The linked PDF could not be accessed at this time.")
+        pdf.output(str(pdf_path))
+        
+    def _create_fallback_press_release_pdf(self, pdf_path, title, date_issued):
+        """Create fallback PDF for press release"""
+        pdf = FPDF()
+        pdf.add_page()
+        pdf.set_font("Arial", size=12)
+        pdf.cell(200, 10, txt=to_latin1(f"FDA Ghana Press Release - {date_issued}"), ln=True, align="C")
+        pdf.ln(10)
+        pdf.set_font("Arial", "B", 14)
+        pdf.multi_cell(0, 10, to_latin1(title))
+        pdf.ln(5)
+        pdf.set_font("Arial", size=10)
+        pdf.multi_cell(0, 8, "Press release details were not directly accessible from the FDA Ghana website.")
+        pdf.multi_cell(0, 8, f"Date: {date_issued}")
+        pdf.output(str(pdf_path))
+
     def run(self):
         logging.info("Starting FDA Ghana Recall Scraper...")
         with sync_playwright() as p:
@@ -606,19 +941,27 @@ class FDARecallScraper:
 
 
 def parse_args():
-    parser = argparse.ArgumentParser(description="FDA Ghana Recall & Alert Scraper CLI")
+    parser = argparse.ArgumentParser(description="FDA Ghana Recall, Alert & Press Release Scraper CLI")
     parser.add_argument("--output-dir", type=str, default="./recalls", help="Output directory for recall/alert PDFs")
     parser.add_argument("--headless", action="store_true", default=True, help="Run browser in headless mode (default: True)")
     parser.add_argument("--verbose", action="store_true", help="Enable verbose logging")
     parser.add_argument("--skip-recalls", action="store_true", help="Skip scraping recalls")
     parser.add_argument("--skip-alerts", action="store_true", help="Skip scraping alerts")
+    parser.add_argument("--skip-press", action="store_true", help="Skip scraping press releases")
     return parser.parse_args()
 
 if __name__ == "__main__":
     args = parse_args()
     output_dir = Path(args.output_dir)
     scraper = FDARecallScraper(output_dir=output_dir, headless=args.headless, verbose=args.verbose)
+    
     if not args.skip_recalls:
         scraper.run()
+    
     if not args.skip_alerts:
         scraper.scrape_alerts()
+    
+    if not args.skip_press:
+        scraper.scrape_press_releases()
+        
+    logging.info("FDA Ghana scraping complete for all enabled sections.")

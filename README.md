@@ -1,15 +1,15 @@
-# FDA Ghana Recall & Alert Scraper
+# FDA Ghana Recall, Alert & Press Release Scraper
 
-A comprehensive web scraper for extracting product recalls and safety alerts from the FDA Ghana website. The scraper downloads PDFs, extracts text content, and stores all data in a PostgreSQL database.
+A comprehensive web scraper for extracting product recalls, safety alerts, and press releases from the FDA Ghana website. The scraper downloads PDFs, extracts text content, and stores all data in a PostgreSQL database.
 
 ## 🚀 Features
 
-- **Dual Functionality**: Scrapes both product recalls and safety alerts
+- **Triple Functionality**: Scrapes product recalls, safety alerts, and press releases
 - **PDF Processing**: Downloads original PDFs and extracts full text content
 - **Database Storage**: Stores all data in PostgreSQL with searchable text
 - **Robust Error Handling**: Creates fallback PDFs when originals are unavailable
 - **Progress Tracking**: Visual progress bars for monitoring scraping status
-- **Flexible Options**: Command-line options to run recalls-only, alerts-only, or both
+- **Flexible Options**: Command-line options to selectively run any combination of the three scrapers
 
 ## 📊 Data Extracted
 
@@ -27,6 +27,12 @@ A comprehensive web scraper for extracting product recalls and safety alerts fro
 - Alert title and description
 - Full PDF text content
 - Alert categorization
+
+### Press Releases
+- Date press release was issued  
+- Press release title
+- Full PDF text content
+- Automatic fallback for inaccessible links
 
 ## 🛠 Installation
 
@@ -55,6 +61,16 @@ venv\Scripts\activate     # On Windows
 ```bash
 pip install -r requirements.txt
 playwright install chromium
+
+# Install Tesseract OCR engine (required for OCR functionality)
+# macOS:
+brew install tesseract
+
+# Ubuntu/Debian:
+# sudo apt-get install tesseract-ocr
+
+# Windows:
+# Download from: https://github.com/UB-Mannheim/tesseract/wiki
 ```
 
 4. **Set up database environment variables (optional):**
@@ -76,14 +92,20 @@ python create_db_table.py
 ### Command Line Options
 
 ```bash
-# Scrape both recalls and alerts (default)
+# Scrape all three types: recalls, alerts, and press releases (default)
 python fda_recall_scraper.py
 
 # Scrape only recalls
-python fda_recall_scraper.py --skip-alerts
+python fda_recall_scraper.py --skip-alerts --skip-press
 
 # Scrape only alerts  
-python fda_recall_scraper.py --skip-recalls
+python fda_recall_scraper.py --skip-recalls --skip-press
+
+# Scrape only press releases
+python fda_recall_scraper.py --skip-recalls --skip-alerts
+
+# Skip press releases (recalls and alerts only)
+python fda_recall_scraper.py --skip-press
 
 # Enable verbose logging
 python fda_recall_scraper.py --verbose
@@ -117,17 +139,21 @@ project_root/
 ├── alerts/                     # Alert PDFs
 │   ├── Alert_Safety_Alert_*.pdf
 │   └── Alert_Medical_Alert_*.pdf
+├── press_releases/             # Press Release PDFs
+│   ├── Press_Release_Title_20250907.pdf
+│   ├── Page_Not_Found_Title_20250823.pdf
+│   └── Another_Press_Release_20250815.pdf
 └── scraper.log               # Detailed logging
 ```
 
 ## 🗄 Database Schema
 
-The scraper uses a single `fda_recalls` table to store both recalls and alerts:
+The scraper uses a single `fda_recalls` table to store recalls, alerts, and press releases:
 
 ```sql
 CREATE TABLE fda_recalls (
     id SERIAL PRIMARY KEY,
-    entry_type VARCHAR(50) DEFAULT 'recall',     -- 'recall' or 'alert'
+    entry_type VARCHAR(50) DEFAULT 'recall',     -- 'recall', 'alert', or 'press_release'
     
     -- Recall-specific fields
     date_recall_issued DATE,
@@ -142,13 +168,18 @@ CREATE TABLE fda_recalls (
     
     -- Alert-specific fields
     date_issued DATE,
-    alert_title TEXT,
-    alert_pdf_filename TEXT,
+    alert_title TEXT,                            -- Also used for press release titles
+    alert_pdf_filename TEXT,                     -- Also used for press release filenames
+    
+    -- Press Release-specific fields (NEW)
+    press_release_title TEXT,                    -- Dedicated column for press release titles
+    press_release_date DATE,                     -- Dedicated column for press release dates  
+    pdf_press_release_link_public_link TEXT,    -- Public PDF URL for press releases
     
     -- Common fields
     source_url TEXT,
     pdf_path TEXT,
-    all_text TEXT,                               -- Extracted PDF content
+    all_text TEXT,                               -- Extracted PDF content (PyPDF2 + OCR fallback)
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
 );
 ```
@@ -174,8 +205,13 @@ The scraper uses these environment variables (with defaults):
 
 ## 🔧 Advanced Features
 
-### PDF Text Extraction
-The scraper automatically extracts text from downloaded PDFs using PyPDF2 and stores it in the `all_text` column for full-text search capabilities.
+### PDF Text Extraction with OCR
+The scraper automatically extracts text from downloaded PDFs using:
+1. **PyPDF2**: For text-based PDFs (primary method)
+2. **OCR (Tesseract)**: For image-based PDFs or when PyPDF2 extraction yields minimal text
+3. **Intelligent Fallback**: Automatically switches to OCR if less than 100 characters extracted
+
+All extracted text is stored in the `all_text` column for full-text search capabilities.
 
 ### Error Handling
 - **404 Errors**: Creates fallback PDFs with available information
@@ -195,6 +231,7 @@ Comprehensive logging with different levels:
 - **Typical Runtime**: 
   - Recalls: ~8-12 minutes for 42 entries
   - Alerts: ~2-3 minutes for 10 entries
+  - Press Releases: ~2-4 minutes for 35 entries
 - **Success Rate**: 95%+ with fallback PDFs for missing content
 - **Text Extraction**: 2,000-8,000 characters per PDF on average
 
@@ -210,6 +247,11 @@ WHERE entry_type = 'recall' AND product_name ILIKE '%antibiotic%';
 -- Search alerts by text content
 SELECT alert_title, date_issued FROM fda_recalls 
 WHERE entry_type = 'alert' AND all_text ILIKE '%counterfeit%';
+
+-- Find press releases about specific topics
+SELECT press_release_title, press_release_date, pdf_press_release_link_public_link 
+FROM fda_recalls 
+WHERE entry_type = 'press_release' AND all_text ILIKE '%covid%';
 
 -- Get recent entries
 SELECT * FROM fda_recalls 
@@ -261,6 +303,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 This scraper extracts data from the official FDA Ghana website:
 - Recalls: https://fdaghana.gov.gh/newsroom/product-recalls-and-alerts/
 - Alerts: https://fdaghana.gov.gh/newsroom/product-alerts/
+- Press Releases: https://fdaghana.gov.gh/newsroom/press-release/
 
 ## 📞 Support
 
@@ -272,4 +315,4 @@ For issues and questions:
 ---
 
 **Last Updated**: September 2025  
-**Version**: 2.0.0 - Added alert scraping and PDF text extraction
+**Version**: 4.0.0 - Added dedicated press release columns, OCR text extraction, and enhanced database structure
